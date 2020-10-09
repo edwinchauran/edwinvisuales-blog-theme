@@ -1,0 +1,262 @@
+#navbar-iframe {
+
+height:0px;
+
+visibility:hidden;
+
+display:none
+
+}
+ul, ol {
+    list-style:none;
+}
+*::selection{
+    background:#8c87f7;
+    color: white;
+}
+a:visited, a:link, a:focus, a:hover, a:active, a:focus-within {
+    list-style:none;
+    text-decoration: none;
+}
+a:hover, i:hover {
+    color:#ffc107;
+}
+a:active, i:active {
+    color:#04855a;
+}
+#buscador{
+    background: rgba(0,0,0,0%);
+    border:none;
+    color:white;
+    width: 100%;
+    font-size: 15px;
+    cursor:pointer;
+}
+#buscador::placeholder {
+    color:white;
+}
+#buscador:focus{
+    outline-style: none;
+}
+ /* HIGHTLIGHTS INFO  */
+ .info {
+    z-index:99;
+    width: 100%;
+    padding: 15px;
+    color:white;
+    font-weight:100;
+    bottom: 0;
+    position:absolute;
+    background:rgba(0, 0, 0, 75%); 
+    cursor: pointer;
+}
+.bg-alpha {
+    background:rgba(0, 0, 0, 50%); 
+}
+.info:hover {
+    background:rgba(251, 255, 0, 0.75); 
+}
+.info-1 {
+    border-right: white 4px solid;
+
+}
+.info-2 {
+    border-right: white 4px solid;
+    border-bottom: white 4px solid;
+}
+.info-3 {
+    border-right: white 4px solid;
+}
+.info-4 {
+    border-bottom: white 4px solid;
+}
+#about {
+    border-bottom: 1px #ffc107 solid;
+}
+/* LEFT SIDEBAR  */
+#leftbar {
+    border: 1px #3c3a70 solid;
+    position:absolute;
+}
+#leftbar ul li {    
+    text-align: center;
+}
+#leftbar i{
+    cursor: pointer;
+}
+#leftbar p {
+    line-height:15px;
+    font-weight: 100;
+    font-size:10pt;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:5px;
+    text-align: center;
+    color:#a8a3ff;
+}
+.rightbar {
+    border-right: 1px #3c3a70 solid;
+}
+.stick-banner {
+    height:187px;
+    z-index:-1;
+}
+.logo {
+    text-shadow: 40px;
+    font-weight: 100;
+}
+
+.bg-purple {
+    background:#2d2b55;
+}
+.bg-purple-2 {
+    background-color:#1c1b38;
+}
+.text-purple {
+    color:#2d2b55;
+}
+.text-purple:hover {
+    color:#a8a3ff;
+}
+.text-purple-muted {
+    color: #6c757d;
+}
+.text-purple-muted:hover {
+    color:#a8a3ff;
+}
+.text-purple-2 {
+    color:#a8a3ff;
+}
+nav a, nav i{
+    color: white;
+}
+nav ul {
+    right:10px;
+    top:10px;
+}
+#back {
+    z-index:1;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background:black;
+    z-index:-10;
+}
+footer p {
+    font-size:10pt;
+    font-weight:100;
+}
+hr {
+    background:#ffc107;
+}
+figure {
+    padding: 0px;
+    margin: 0px;
+}
+figure:hover {
+    cursor:pointer;
+}
+.photo-1 {
+    border-right: white 4px solid;
+    height:300px;
+}
+.photo-2 {
+    border-bottom: white 4px solid;
+    border-right: white 4px solid;
+    height: 150px;
+    
+}
+.photo-3 {
+    border-right: white 4px solid;
+    height: 150px;
+    
+}
+.photo-4 {
+    border-bottom: white 4px solid;
+    height: 150px;
+}
+.photo-5 {
+    height:150px;
+}
+.rightbar img {
+    border-radius: 3px 3px 3px 3px;
+}
+.recientes {
+    transform: translate(0, -2px);
+    border-bottom: 2px white solid;
+}
+.recientes p {
+    margin: 0px;
+}
+.border-title {
+    border-bottom: 2px #ffc107 solid;
+}
+#redes {
+    position:absolute;
+    bottom: 5px;
+    width: 250px;
+}
+#nav {
+    z-index:100;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) { 
+    #back {
+        background-size: 200% auto;
+        background-position: 50% 0px;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .photo-1 {
+        height: auto;
+    }
+    .photo-2 {
+        height: auto;
+    }
+    .photo-3 {
+        height: auto;
+    }
+    .photo-4 {
+        height: auto;
+    }
+    .photo-5 {
+        height: auto;
+    }
+    .info-1, .info-2, .info-3, .info-4, .photo-1, .photo-2, .photo-3, .photo-4 {
+        border: none;
+    }
+
+}
+@media (min-width: 576px) { 
+    #back {
+        background-size: 100% auto;
+        background-position: 0px -100px;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #back {
+        background-size: 100% auto;
+        background-position: 0px 0px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #back {
+        background-size: 100% auto;
+        background-position: 0px 0px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    #back {
+        background-size: 100% auto;
+        background-position: 0px -100px;
+    }
+}

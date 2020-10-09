@@ -1,0 +1,23 @@
+{
+  "name": "edwinvisuales-blog-theme",
+  "version": "1.0.0-alpha",
+  "description": "A blogger theme made with bootstrap and pugjs",
+  "main": "",
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "pug --out ./dest --name edwinBlogTheme --extension xml --pretty --watch ./views/index.pug",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Blogger",
+    "theme",
+    "blog",
+    "xml",
+    "pugjs"
+  ],
+  "author": "edwinvisuales",
+  "license": "ISC"
+}
