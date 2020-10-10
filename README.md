@@ -1,8 +1,8 @@
 # Edwin visuales theme 
 
-_It's a Blogger blog theme made for Edwin Visuales [blogspot website](https://www.edwinvisuales.blogspot.com).
+_It's a Blogger blog theme made for Edwin Visuales [blogspot website](https://edwinvisuales.blogspot.com/)._
 
-This theme has a personal style with a purple color meaning the fantasy of techonology is, but maybe this could change in the future._
+_This theme has a personal style with a purple color meaning the fantasy of techonology is, but maybe this could change in the future._
 
 ## Setup
 
