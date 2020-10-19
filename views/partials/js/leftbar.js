@@ -3,7 +3,7 @@ $(document).ready(()=>{
     var screenWidth = window.innerWidth;
     var desktopHeightBanner = Math.ceil(screenHeight / 3);
     var mobileHeightBanner = Math.ceil(screenHeight / 4);
-    var banner = $("#hightlight").height();
+    var banner = $("#hightlights").height();
     var currentScroll = 0;
 
     // Close Search
@@ -17,10 +17,9 @@ $(document).ready(()=>{
         console.log("done")
     });
 
-    $('#leftbar').css({"height":`${screenHeight}px`})
     
     // responsive banner
-    if(screenWidth <= 500) {
+    if(500 >= screenWidth) {
         $('header').css({"height":`${mobileHeightBanner}px`})
         $('#leftbar').css({"top":`${mobileHeightBanner}px`})
     }
@@ -28,6 +27,8 @@ $(document).ready(()=>{
         $('header').css({"height":`${desktopHeightBanner}px`})
         $('#leftbar').css({"top":`${desktopHeightBanner}px`})
     }
+/**
+    $('#leftbar').css({"height":`${screenHeight}px`})
 
     // left sidebar fixing 
     $(window).scroll(()=> {
@@ -46,7 +47,7 @@ $(document).ready(()=>{
 
         }
 
-        if(currentScroll < window.scrollY)
+        if(window.scrollY > currentScroll)
         {
             $("#nav").hide('fast')
             currentScroll = window.scrollY
@@ -56,4 +57,5 @@ $(document).ready(()=>{
             currentScroll = window.scrollY;
         }
     })
+    **/
 })

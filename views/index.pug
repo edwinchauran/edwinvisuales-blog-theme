@@ -1,25 +1,25 @@
 include partials/head.pug
 
     //BANNER - HEADER
-    header.offset-0.offset-xl-1.col-12.col-md-12.col-xl-10.p-0.d-flex.justify-content-center
+    header.col-12.col-xl-10.p-0.d-flex.justify-content-center
         include partials/banner.pug
-
     body.bg-purple-2
 
         //LEFT - SIDEBAR
-        aside#leftbar.col-lg-2.offset-0.offset-xl-1.text-white.d-none.d-lg-block.bg-purple
+        //#leftbar.col-lg-2.offset-0.offset-xl-1.text-white.d-none.d-lg-block.bg-purple
             include partials/leftbar.pug
 
         //HIGHTLIGHTS POSTS
-        #hightlight.col-12.col-lg-10.col-xl-8.offset-0.offset-lg-2.offset-xl-3.bg-white
-            include partials/hightlights.pug
+        #hightlights.col-12.col-xl-8.bg-white
+            .container
+                include partials/hightlights.pug
 
-        //MAIN SECTION - NEWSFEED
-        .recientes.col-12.col-md-10.col-lg-8.col-xl-6.offset-0.offset-lg-2.offset-xl-3.pb-3.pb-md-0.bg-white
-            include partials/newsfeed.pug
+        //MAIN SECTION 
+        main.recientes.col-12.col-lg-8.col-xl-6.pb-3.pb-md-0.bg-white
+            include partials/main.pug
 
         //RIGHT SIDEBAR
-        aside.col-12.col-md-2.rightbar.px-md-2.py-md-1.bg-purple
+        //#rightbar.col-12.col-md-2.rightbar.px-md-2.py-md-1.bg-purple
             include partials/rightbar.pug
 
     //FOOTER
