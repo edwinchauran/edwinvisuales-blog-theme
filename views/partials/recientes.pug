@@ -1,0 +1,29 @@
+h3.pb-1.pt-0.pl-1.mt-2.mb-0.font-italic.border-title.h4.text-white
+    |Articulos Recientes
+article.col-12.mt-2.mx-0.py-3.p-md-2.rounded-lg.bg-light
+    .row
+        h4.h4.p-0.ml-2.m-md-0.d-block.d-md-none.mb-1.mb-md-3
+        // POST TITLE FOR MOBILES
+        a.text-purple(href='<?php the_permalink();?>')
+        // ?php the_title();?
+        figure.figure-img.col-12.col-md-4
+            // POST IMAGE
+            img.my-3.img-fluid.rounded-sm(src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT")
+        .col-12.col-md-8
+            // POST TITLE
+            h4.h4.p-0.m-0.d-none.d-md-block
+                a.text-purple(href='<?php the_permalink();?>')
+                    |sample title
+                    // ?php the_title();?
+            // DATE FOR MOBILES
+            a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(href='<?php the_permalink();?>') 
+                |Published 2 days ago - 5 min read - 8 comments
+                // THE EXCERPT
+                span.figure-caption
+                    |23-23-23
+            // DATE
+            a.text-purple-muted.d-block.d-md-none.p-0.mx-0.mb-0.mt-2(href='#') 
+               |Published 2 days ago - 8 comments
+            a.text-purple.d-none.d-md-block.mt-1.bg-purple-hover(href='#') Leer más
+
+
