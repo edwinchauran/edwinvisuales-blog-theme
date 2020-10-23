@@ -1,4 +1,5 @@
 /node_modules
+/dest/*.html
 /dest/*.xml
 **/*~
 **/*.swp

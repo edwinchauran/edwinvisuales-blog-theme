@@ -10,8 +10,7 @@
   "scripts": {
     "build": "pug --out ./dest --extension xml --pretty --watch ./views/index.pug",
     "html": "pug --out ./dest  --extension html --pretty --watch ./views/index.pug",
-
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "live-server ./dest"
   },
   "keywords": [
     "Blogger",

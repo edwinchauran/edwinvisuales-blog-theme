@@ -1,3 +1,7 @@
 //Header, Blog, Profile, PageList, AdSense, Attribution, HTML"
 b:section#main(growth="vertical" maxwidgets="" showaddelement="yes")
-    b:widget#Blog1.row(locked="false" title="Blog Posts" type="Blog" version="1")/
+    if html 
+        .text-justify
+            include lorem.txt 
+    else
+        b:widget#Blog1.row(locked="false" title="Blog Posts" type="Blog" version="1")/

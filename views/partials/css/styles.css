@@ -111,9 +111,8 @@ a:active, i:active {
 .bg-purple {
     background:#1c1b38;
 }
-.bg-purple-dark
- {
-     background:#2d2b55;
+.bg-purple-light {
+     background-color:#2d2b55;
 }
 .bg-blanco {
   background: white linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 25%);
@@ -194,6 +193,7 @@ figure:hover {
 }
 .border-title {
     border-bottom: 2px #ffc107 solid;
+    max-width: 210px;
 }
 #redes {
     position:absolute;
