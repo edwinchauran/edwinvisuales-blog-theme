@@ -6,9 +6,11 @@ nav.navbar.navbar-expand-md.yellow-border
         #navbarSupportedContent.collapse.navbar-collapse
             ul.navbar-nav.mr-auto.float-right
                 li.nav-item.active
-                    a.nav-link(href='#')
+                    a.nav-link(expr:href="data:blog.homepageUrl")
                         | Inicio 
                         span.sr-only (current)
                 li.nav-item
                     a.nav-link(href="#")
                         | Sobre mi
+//b:section#header.header(maxwidgets="1" showaddelement="yes")
+    b:widget#Header1(locked="true" title="" type="Header")/

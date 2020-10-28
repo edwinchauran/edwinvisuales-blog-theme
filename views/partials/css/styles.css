@@ -262,3 +262,10 @@ main, #nav {
         background-position: 0px -100px;
     }
 }
+.post img{
+  width: 95%;
+  height: auto;
+}
+.post .icon-action {
+    width:20px !important;
+}

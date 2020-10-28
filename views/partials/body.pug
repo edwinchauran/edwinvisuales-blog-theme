@@ -1,15 +1,16 @@
 .container-xl.shadow-lg.bg-purple
     .row
-        //HIGHTLIGHTS POSTS
-        
-        #hightlights.col-12
-            include hightlights.pug
+
+        b:if(cond="data:blog.url == data:blog.homepageUrl")
+            //HIGHTLIGHTS POSTS
+            #hightlights.col-12
+                include hightlights.pug
 
         .col-12.col-lg-9
-            //RECIENTES
-            #recientes.text-white
-                include recientes.pug
-
+            b:if(cond="data:blog.url == data:blog.homepageUrl")
+                //RECIENTES
+                #recientes.text-white
+                    include recientes.pug
             //MAIN SECTION 
             main.my-3.rounded.text-white.p-3.bg-purple-light
                 include main.pug
