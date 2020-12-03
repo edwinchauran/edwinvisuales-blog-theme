@@ -1,20 +1,22 @@
-.container-xl.shadow-lg.bg-purple
+.container-fluid.shadow-lg.bg-purple
     .row
-
-        b:if(cond="data:blog.url == data:blog.homepageUrl")
+        .col-12
+            b:section(id="fuck" showaddelement="yes") 
+                //include test.pug 
+        b:if(cond="data:blog.url == data:blog.homepageUrl").container
             //HIGHTLIGHTS POSTS
-            #hightlights.col-12
+            #hightlights.container
                 include hightlights.pug
 
-        .col-12.col-lg-9
-            b:if(cond="data:blog.url == data:blog.homepageUrl")
+        .col-12.col-lg-8
                 //RECIENTES
                 #recientes.text-white
                     include recientes.pug
-            //MAIN SECTION 
-            main.my-3.rounded.text-white.p-3.bg-purple-light
-                include main.pug
+                //MAIN SECTION 
+                main.container.my-3.text-white
+                    include posts.pug
 
         //RIGHT SIDEBAR
-        #rightbar.col-12.col-lg-3.text-white.radius
-            include rightbar.pug
+        #rightbar.col-12.col-lg-4.text-white.radius
+            .container
+                include rightbar.pug

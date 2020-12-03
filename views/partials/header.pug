@@ -1,16 +1,20 @@
-nav.navbar.navbar-expand-md.yellow-border
+nav.navbar.navbar-expand-md.yellow-border.navbar-dark.bg-negro
     .container
-        a.navbar-brand(href='#') Edwin Visuales Blog 
+        a.navbar-brand(expr:href='data:blog.homepageUrl')
+            if html
+                | "Edwin Visuales Blog"
+            else
+               <data:blog.title/>
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-        span.navbar-toggler-icon
+            span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
-            ul.navbar-nav.mr-auto.float-right
-                li.nav-item.active
+            ul.navbar-nav.mr-auto
+                li.nav-item
+                    b:class(name="active" cond='data:blog.pageType == "index"')
                     a.nav-link(expr:href="data:blog.homepageUrl")
                         | Inicio 
-                        span.sr-only (current)
+                        span.sr-only
+                            | (current)
                 li.nav-item
                     a.nav-link(href="#")
                         | Sobre mi
-//b:section#header.header(maxwidgets="1" showaddelement="yes")
-    b:widget#Header1(locked="true" title="" type="Header")/

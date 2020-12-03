@@ -6,7 +6,17 @@
     <title>Edwin's blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
     <link href="https true://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <style>.yellow-border {
+    <b:skin>
+       <![CDATA[.title {
+    display:inline-block;
+    padding-top:.3125rem;
+    padding-bottom:.3125rem;
+    margin-right:1rem;
+    font-size:1.25rem;
+    line-height:inherit;
+    white-space:nowrap;
+} 
+.yellow-border {
     border-bottom: 1px;
     border-color: #ffc107;
 }
@@ -58,6 +68,7 @@ a:active, i:active {
     z-index:99;
     width: 100%;
     padding: 15px;
+    margin: 0px;
     color:white;
     font-weight:100;
     bottom: 0;
@@ -71,17 +82,7 @@ a:active, i:active {
 .info:hover {
     background:rgba(251, 255, 0, 0.75); 
 }
-.info-1, .info-3 {
-    border-right: #1c1b38 4px solid;
 
-}
-.info-2 {
-    border-right: #1c1b38  4px solid;
-    border-bottom: #1c1b38   4px solid;
-}
-.info-4 {
-    border-bottom: #1c1b38 4px solid;
-}
 #about {
     border-bottom: 1px #ffc107 solid;
 }
@@ -117,21 +118,20 @@ a:active, i:active {
 }
 
 .bg-purple {
-    background:#1c1b38;
+    background:#0A0B25;
 }
 .bg-purple-light {
      background-color:#2d2b55;
+}
+.bg-negro {
+    background-color: black;
 }
 .bg-blanco {
   background: white linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 25%);
 }
 
 body {
- background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='837' height='837' viewBox='0 0 200 200'%3E%3Cg %3E%3Cpolygon fill='%23322e71' points='100 57.1 64 93.1 71.5 100.6 100 72.1'/%3E%3Cpolygon fill='%233c3889' points='100 57.1 100 72.1 128.6 100.6 136.1 93.1'/%3E%3Cpolygon fill='%23322e71' points='100 163.2 100 178.2 170.7 107.5 170.8 92.4'/%3E%3Cpolygon fill='%233c3889' points='100 163.2 29.2 92.5 29.2 107.5 100 178.2'/%3E%3Cpath fill='%234742a1' d='M100 21.8L29.2 92.5l70.7 70.7l70.7-70.7L100 21.8z M100 127.9L64.6 92.5L100 57.1l35.4 35.4L100 127.9z'/%3E%3Cpolygon fill='%233a711e' points='0 157.1 0 172.1 28.6 200.6 36.1 193.1'/%3E%3Cpolygon fill='%23478925' points='70.7 200 70.8 192.4 63.2 200'/%3E%3Cpolygon fill='%2353a12b' points='27.8 200 63.2 200 70.7 192.5 0 121.8 0 157.2 35.3 192.5'/%3E%3Cpolygon fill='%23478925' points='200 157.1 164 193.1 171.5 200.6 200 172.1'/%3E%3Cpolygon fill='%233a711e' points='136.7 200 129.2 192.5 129.2 200'/%3E%3Cpolygon fill='%2353a12b' points='172.1 200 164.6 192.5 200 157.1 200 157.2 200 121.8 200 121.8 129.2 192.5 136.7 200'/%3E%3Cpolygon fill='%233a711e' points='129.2 0 129.2 7.5 200 78.2 200 63.2 136.7 0'/%3E%3Cpolygon fill='%2353a12b' points='200 27.8 200 27.9 172.1 0 136.7 0 200 63.2 200 63.2'/%3E%3Cpolygon fill='%23478925' points='63.2 0 0 63.2 0 78.2 70.7 7.5 70.7 0'/%3E%3Cpolygon fill='%2353a12b' points='0 63.2 63.2 0 27.8 0 0 27.8'/%3E%3C/g%3E%3C/svg%3E");
-
-    background-position: center;
-    background-attachment: fixed;
-    background-color: #1c1b38;
+   background-color: #0A0B25;
 
 }
 .text-purple {
@@ -175,23 +175,25 @@ figure:hover {
     cursor:pointer;
 }
 .photo-1 {
-    border-right: #1c1b38 4px solid;
-    height:300px;
+    border-right: #0A0B25 4px solid;
 }
+
 .photo-2 {
-    border-bottom: white 0px 4px 4px 0px solid;
-    height: 150px;
+    border-style: solid;
+    border-color: #0A0B25;
+    border-width: 0px 4px 4px 0px;
 }
 .photo-3 {
-    border-right: #1c1b38 4px solid;
-    height: 150px;
+    border-right: #0A0B25 4px solid;
 }
 .photo-4 {
-    border-bottom: #1c1b38 4px solid;
-    height: 150px;
+    border-bottom: #0A0B25 4px solid;
 }
-.photo-5 {
+.height-150 {
     height:150px;
+}
+.height-300 {
+    height:304px;
 }
 .borderline {
     border: 1px #3c3a70 solid;
@@ -223,23 +225,14 @@ main, #nav {
     }
 }
 @media (min-width: 320px) and (max-width: 767px) {
-    .photo-1 {
+    .photo-1, .photo-2, .photo-3, .photo-4, .photo-5{
         height: auto;
     }
-    .photo-2 {
-        height: auto;
-    }
-    .photo-3 {
-        height: auto;
-    }
-    .photo-4 {
-        height: auto;
-    }
-    .photo-5 {
-        height: auto;
-    }
-    .info-1, .info-2, .info-3, .info-4, .photo-1, .photo-2, .photo-3, .photo-4 {
+    .hide-border {
         border: none;
+    }
+    .height-150 {
+    height: auto;
     }
 
 }
@@ -252,87 +245,87 @@ main, #nav {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-    #back {
-        background-size: 100% auto;
-        background-position: 0px 0px;
+
+    /*
+    .recientes {
+        margin: auto;
+        width:50%;
     }
+*/
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-   #back {
-        background-size: 100% auto;
-        background-position: 0px -100px;
-    }
+    .post img {
+        width: 95%;
+        height: auto;
 }
-.post img{
-  width: 95%;
-  height: auto;
+    .post .icon-action {
+        width:20px !important;
 }
-.post .icon-action {
-    width:20px !important;
-}
-
-    </style>
+      ]]>
+    </b:skin>
   </head>
   <!--BANNER - HEADER-->
   <header>
-    <nav class="navbar navbar-expand-md yellow-border">
-      <div class="container"><a class="navbar-brand" href="#">Edwin Visuales Blog </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button><span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-md yellow-border navbar-dark bg-negro">
+      <div class="container"><a class="navbar-brand" expr:href="data:blog.homepageUrl"><data:blog.title/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto float-right">
-            <li class="nav-item active"><a class="nav-link" expr:href="data:blog.homepageUrl">Inicio <span class="sr-only">(current)</span></a></li>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <b:class name="active" cond="data:blog.pageType == &quot;index&quot;"></b:class><a class="nav-link" expr:href="data:blog.homepageUrl">Inicio <span class="sr-only">(current)</span></a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">Sobre mi</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!--b:section#header.header(maxwidgets="1" showaddelement="yes")b:widget#Header1(locked="true" title="" type="Header")/
-    -->
   </header>
   <body>
-    <div class="container-xl shadow-lg bg-purple">
+    <div class="container-fluid shadow-lg bg-purple">
       <div class="row">
-        <b:if cond="data:blog.url == data:blog.homepageUrl">
+        <div class="col-12">
+          <b:section id="fuck" showaddelement="yes"> 
+            <!--include test.pug -->
+          </b:section>
+        </div>
+        <b:if class="container" cond="data:blog.url == data:blog.homepageUrl">
           <!--HIGHTLIGHTS POSTS-->
-          <div class="col-12" id="hightlights">
+          <div class="container" id="hightlights">
             <div class="p-3">
               <div class="row">
                 <div class="col-12 col-md-6 p-0 m-0">
                   <article>
-                    <figure class="position-relative"><img class="img-fluid photo-1 p-0 mb-2 m-md-0" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info info-1 mb-2 m-md-0">
-                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                    <figure class="position-relative photo-1 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-300" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                      <div class="info mb-2 m-md-0">1</div>
                     </figure>
                   </article>
                 </div>
                 <div class="col-12 col-md-3 p-0 m-0">
                   <article>
-                    <figure class="position-relative"><img class="img-fluid photo-2 p-0 mb-2 m-md-0" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info info-2 mb-2 m-md-0">
-                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                    <figure class="position-relative photo-2 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                      <div class="info mb-2 m-md-0">2</div>
                     </figure>
                   </article>
                   <article>
-                    <figure class="position-relative"><img class="img-fluid photo-3 p-0 mb-2 m-md-0" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info info-3 mb-2 m-md-0">foto 3</div>
+                    <figure class="position-relative photo-3 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                      <div class="info mb-2 m-md-0">3</div>
                     </figure>
                   </article>
                 </div>
                 <div class="col-12 col-md-3 p-0 m-0">
                   <article>
-                    <figure class="position-relative"><img class="img-fluid photo-4 p-0 mb-2 m-md-0" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info info-4 mb-2 m-md-0">foto 4444</div>
+                    <figure class="position-relative photo-4 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                      <div class="info mb-2 m-md-0">4444</div>
                     </figure>
                   </article>
                   <article>
-                    <figure class="position-relative"><img class="img-fluid photo-5 p-0 mb-2 m-md-0" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                    <figure class="position-relative photo-5 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
                       <div class="info mb-2 m-md-0">foto 5</div>
                     </figure>
                   </article>
@@ -341,59 +334,56 @@ main, #nav {
             </div>
           </div>
         </b:if>
-        <div class="col-12 col-lg-9">
-          <b:if cond="data:blog.url == data:blog.homepageUrl">
-            <!--RECIENTES-->
-            <div class="text-white" id="recientes">
-              <h3 class="pb-1 pt-0 pl-1 font-italic border-title h4 px-auto">Articulos Recientes</h3>
-              <article class="col-12 mt-2 mx-0 py-3 p-md-2 rounded-lg bg-purple-light">
-                <div class="row">
-                  <h4 class="h4 p-0 ml-2 m-md-0 d-block d-md-none mb-1 mb-md-3"></h4>
-                  <!-- POST TITLE FOR MOBILES--><a class="text-purple" href="&lt;?php the_permalink();?&gt;"></a>
-                  <!-- ?php the_title();?-->
-                  <figure class="figure-img col-12 col-md-4">
-                    <!-- POST IMAGE--><img class="my-3 img-fluid rounded-sm" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                  </figure>
-                  <div class="col-12 col-md-8">
-                    <!-- POST TITLE-->
-                    <h4 class="h4 p-0 m-0 d-none d-md-block"><a class="text-purple-2" href="&lt;?php the_permalink();?&gt;">sample title</a></h4>
-                    <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" href="&lt;?php the_permalink();?&gt;">
-                       Published 2 days ago - 5 min read - 8 comments
-                      <!-- THE EXCERPT--><span class="figure-caption">23-23-23</span></a>
-                    <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" href="#">
-                       Published 2 days ago - 8 comments</a><a class="text-purple-2 d-none d-md-block mt-1 bg-purple-hover" href="#">Leer más</a>
-                  </div>
+        <div class="col-12 col-lg-8">
+          <!--RECIENTES-->
+          <div class="text-white" id="recientes">
+            <h3 class="pb-1 pt-0 pl-1 font-italic border-title h4 px-auto recientes">Articulos Recientes</h3>
+            <article class="col-12 mt-2 mx-0 py-3 p-md-2 rounded-lg border">
+              <div class="row">
+                <h4 class="h4 p-0 ml-2 m-md-0 d-block d-md-none mb-1 mb-md-3"></h4>
+                <!-- POST TITLE FOR MOBILES--><a class="text-purple" href="&lt;?php the_permalink();?&gt;"></a>
+                <!-- ?php the_title();?-->
+                <figure class="figure-img col-12 col-md-4">
+                  <!-- POST IMAGE--><img class="my-3 img-fluid rounded-sm" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                </figure>
+                <div class="col-12 col-md-8">
+                  <!-- POST TITLE-->
+                  <h4 class="h4 p-0 m-0 d-none d-md-block"><a class="text-purple-2" href="&lt;?php the_permalink();?&gt;">sample title</a></h4>
+                  <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" href="&lt;?php the_permalink();?&gt;">
+                     Published 2 days ago - 5 min read - 8 comments
+                    <!-- THE EXCERPT--><span class="figure-caption">23-23-23</span></a>
+                  <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" href="#">
+                     Published 2 days ago - 8 comments</a><a class="text-purple-2 d-none d-md-block mt-1 bg-purple-hover" href="#">Leer más</a>
                 </div>
-              </article>
-            </div>
-          </b:if>
-          <!--MAIN SECTION -->
-          <main class="my-3 rounded text-white p-3 bg-purple-light">
-            <!--Header, Blog, Profile, PageList, AdSense, Attribution, HTML"-->
-            <b:section id="main" growth="vertical" maxwidgets="" showaddelement="yes">
-              <div class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex. Duis sodales condimentum mauris in dignissim. Etiam at sollicitudin lacus, ut cursus libero. Nam nibh enim, vestibulum eu turpis non, luctus volutpat felis. Integer orci metus, suscipit vel massa et, consectetur tempus ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dapibus luctus ornare. Praesent at volutpat justo.
-
-Pellentesque nunc tellus, consectetur ut ultrices sit amet, pulvinar eu libero. Nulla egestas, massa a congue auctor, mi eros semper libero, et ultricies sapien mauris vestibulum ligula. Aliquam ut neque ac turpis pellentesque mattis id vitae ligula. Donec dolor tellus, condimentum eu condimentum in, egestas vel eros. Praesent scelerisque diam turpis, consectetur lobortis mi vestibulum eget. Aenean pellentesque, tortor vitae viverra feugiat, metus lorem semper nisi, in auctor sem libero eu ex. Curabitur sit amet eleifend diam, sit amet molestie metus. Pellentesque viverra nisl vitae eros porttitor, ac facilisis nisl vehicula. Pellentesque non nulla lobortis, viverra urna sit amet, commodo velit.
-
-Nullam quis tortor in magna mattis faucibus. Sed at arcu a lacus malesuada sollicitudin. Integer purus elit, lobortis eget bibendum eget, pulvinar id sapien. Aenean mi nibh, maximus ac nunc ut, cursus fermentum arcu. Nullam aliquet ultrices ligula eu imperdiet. Aenean sit amet vehicula diam. Etiam blandit turpis augue, finibus imperdiet ex suscipit non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque commodo ac ligula quis iaculis. Pellentesque porttitor ultricies lacus, elementum pulvinar ante auctor nec. Ut laoreet nunc urna, sed porttitor dui aliquet vitae.
-
-Pellentesque mauris dolor, porttitor euismod ipsum sed, bibendum iaculis dui. In hac habitasse platea dictumst. Quisque in urna sed orci pharetra lobortis sed vitae nisl. Fusce non velit malesuada, cursus erat et, tincidunt diam. Morbi rutrum felis sit amet nisl venenatis, vestibulum rutrum velit ultricies. In hac habitasse platea dictumst. Nulla cursus iaculis purus a laoreet. Suspendisse semper sollicitudin massa, eget fringilla sem. Vivamus at ante ac nulla ornare condimentum.
-
-Nam consequat blandit interdum. Maecenas sollicitudin interdum purus, vel hendrerit velit tincidunt et. Vestibulum nec tempus mauris, vitae consectetur ex. Praesent in congue sapien, eu aliquam erat. Integer lobortis eu lectus in lobortis. In tempus neque commodo sem vestibulum aliquam. Duis fermentum turpis velit, eget porta mi placerat eget. Duis elementum ultrices sapien, non scelerisque lacus suscipit in. Cras lacinia efficitur mauris eget vestibulum. Cras non ex nec nibh cursus bibendum. Nullam ac convallis risus. Nullam varius leo enim, hendrerit rhoncus nibh fermentum a. Vivamus nec nunc sed nisl consequat viverra. Nulla pretium nisl ipsum, a imperdiet risus pretium sit amet.
-
               </div>
+            </article>
+          </div>
+          <!--MAIN SECTION -->
+          <main class="container my-3 text-white">
+            <b:section id="main" growth="vertical" maxwidgets="" showaddelement="yes">
+              <b:widget class="row" id="Blog1" locked="false" title="Blog Posts" type="Blog" version="1"></b:widget>
             </b:section>
           </main>
         </div>
         <!--RIGHT SIDEBAR-->
-        <div class="col-12 col-lg-3 text-white radius" id="rightbar">
-          <b:section class="sidebar" id="sidebar" preferred="yes" showaddelement="yes"></b:section>
-          <p class="h6 my-2 font-italic border-title pb-1">Artículos Destacados </p><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-          <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-          <hr/><img class="img-fluid my-2" src="https://1.bp.blogspot.com/-5ZbYcvfgEUY/X39dCs0tCAI/AAAAAAAAEFs/1LoxLrIt2HQycOknWc6jAHdS-VjDOucpQCLcBGAsYHQ/s16000/ad03.png" alt="..."/>
-          <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-          <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-          <hr/>
+        <div class="col-12 col-lg-4 text-white radius" id="rightbar">
+          <div class="container">
+            <b:section id="sidebar" preferred="yes" showaddelement="yes">
+              <!--search-->
+            </b:section>
+            <!--#about
+            .d-flex.pt-2
+                i#openSearch.material-icons.text-white.p-1 search
+                input#buscador(type='search')
+            
+            -->
+            <p class="h5 my-2 font-italic border-title pb-1">Artículos Destacados </p><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+            <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+            <hr/><img class="img-fluid my-2" src="https://1.bp.blogspot.com/-5ZbYcvfgEUY/X39dCs0tCAI/AAAAAAAAEFs/1LoxLrIt2HQycOknWc6jAHdS-VjDOucpQCLcBGAsYHQ/s16000/ad03.png" alt="..."/>
+            <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+            <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+            <hr/>
+          </div>
         </div>
       </div>
     </div>

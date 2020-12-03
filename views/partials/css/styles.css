@@ -1,3 +1,12 @@
+.title {
+    display:inline-block;
+    padding-top:.3125rem;
+    padding-bottom:.3125rem;
+    margin-right:1rem;
+    font-size:1.25rem;
+    line-height:inherit;
+    white-space:nowrap;
+} 
 .yellow-border {
     border-bottom: 1px;
     border-color: #ffc107;
@@ -50,6 +59,7 @@ a:active, i:active {
     z-index:99;
     width: 100%;
     padding: 15px;
+    margin: 0px;
     color:white;
     font-weight:100;
     bottom: 0;
@@ -63,17 +73,7 @@ a:active, i:active {
 .info:hover {
     background:rgba(251, 255, 0, 0.75); 
 }
-.info-1, .info-3 {
-    border-right: #1c1b38 4px solid;
 
-}
-.info-2 {
-    border-right: #1c1b38  4px solid;
-    border-bottom: #1c1b38   4px solid;
-}
-.info-4 {
-    border-bottom: #1c1b38 4px solid;
-}
 #about {
     border-bottom: 1px #ffc107 solid;
 }
@@ -109,21 +109,20 @@ a:active, i:active {
 }
 
 .bg-purple {
-    background:#1c1b38;
+    background:#0A0B25;
 }
 .bg-purple-light {
      background-color:#2d2b55;
+}
+.bg-negro {
+    background-color: black;
 }
 .bg-blanco {
   background: white linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 25%);
 }
 
 body {
- background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='837' height='837' viewBox='0 0 200 200'%3E%3Cg %3E%3Cpolygon fill='%23322e71' points='100 57.1 64 93.1 71.5 100.6 100 72.1'/%3E%3Cpolygon fill='%233c3889' points='100 57.1 100 72.1 128.6 100.6 136.1 93.1'/%3E%3Cpolygon fill='%23322e71' points='100 163.2 100 178.2 170.7 107.5 170.8 92.4'/%3E%3Cpolygon fill='%233c3889' points='100 163.2 29.2 92.5 29.2 107.5 100 178.2'/%3E%3Cpath fill='%234742a1' d='M100 21.8L29.2 92.5l70.7 70.7l70.7-70.7L100 21.8z M100 127.9L64.6 92.5L100 57.1l35.4 35.4L100 127.9z'/%3E%3Cpolygon fill='%233a711e' points='0 157.1 0 172.1 28.6 200.6 36.1 193.1'/%3E%3Cpolygon fill='%23478925' points='70.7 200 70.8 192.4 63.2 200'/%3E%3Cpolygon fill='%2353a12b' points='27.8 200 63.2 200 70.7 192.5 0 121.8 0 157.2 35.3 192.5'/%3E%3Cpolygon fill='%23478925' points='200 157.1 164 193.1 171.5 200.6 200 172.1'/%3E%3Cpolygon fill='%233a711e' points='136.7 200 129.2 192.5 129.2 200'/%3E%3Cpolygon fill='%2353a12b' points='172.1 200 164.6 192.5 200 157.1 200 157.2 200 121.8 200 121.8 129.2 192.5 136.7 200'/%3E%3Cpolygon fill='%233a711e' points='129.2 0 129.2 7.5 200 78.2 200 63.2 136.7 0'/%3E%3Cpolygon fill='%2353a12b' points='200 27.8 200 27.9 172.1 0 136.7 0 200 63.2 200 63.2'/%3E%3Cpolygon fill='%23478925' points='63.2 0 0 63.2 0 78.2 70.7 7.5 70.7 0'/%3E%3Cpolygon fill='%2353a12b' points='0 63.2 63.2 0 27.8 0 0 27.8'/%3E%3C/g%3E%3C/svg%3E");
-
-    background-position: center;
-    background-attachment: fixed;
-    background-color: #1c1b38;
+   background-color: #0A0B25;
 
 }
 .text-purple {
@@ -167,23 +166,25 @@ figure:hover {
     cursor:pointer;
 }
 .photo-1 {
-    border-right: #1c1b38 4px solid;
-    height:300px;
+    border-right: #0A0B25 4px solid;
 }
+
 .photo-2 {
-    border-bottom: white 0px 4px 4px 0px solid;
-    height: 150px;
+    border-style: solid;
+    border-color: #0A0B25;
+    border-width: 0px 4px 4px 0px;
 }
 .photo-3 {
-    border-right: #1c1b38 4px solid;
-    height: 150px;
+    border-right: #0A0B25 4px solid;
 }
 .photo-4 {
-    border-bottom: #1c1b38 4px solid;
-    height: 150px;
+    border-bottom: #0A0B25 4px solid;
 }
-.photo-5 {
+.height-150 {
     height:150px;
+}
+.height-300 {
+    height:304px;
 }
 .borderline {
     border: 1px #3c3a70 solid;
@@ -215,23 +216,14 @@ main, #nav {
     }
 }
 @media (min-width: 320px) and (max-width: 767px) {
-    .photo-1 {
+    .photo-1, .photo-2, .photo-3, .photo-4, .photo-5{
         height: auto;
     }
-    .photo-2 {
-        height: auto;
-    }
-    .photo-3 {
-        height: auto;
-    }
-    .photo-4 {
-        height: auto;
-    }
-    .photo-5 {
-        height: auto;
-    }
-    .info-1, .info-2, .info-3, .info-4, .photo-1, .photo-2, .photo-3, .photo-4 {
+    .hide-border {
         border: none;
+    }
+    .height-150 {
+    height: auto;
     }
 
 }
@@ -244,28 +236,25 @@ main, #nav {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-    #back {
-        background-size: 100% auto;
-        background-position: 0px 0px;
+
+    /*
+    .recientes {
+        margin: auto;
+        width:50%;
     }
+*/
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-   #back {
-        background-size: 100% auto;
-        background-position: 0px -100px;
-    }
+    .post img {
+        width: 95%;
+        height: auto;
 }
-.post img{
-  width: 95%;
-  height: auto;
-}
-.post .icon-action {
-    width:20px !important;
+    .post .icon-action {
+        width:20px !important;
 }
