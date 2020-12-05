@@ -71,16 +71,13 @@ a:active, i:active {
     margin: 0px;
     color:white;
     font-weight:100;
-    bottom: 0;
+    bottom: 2;
     position:absolute;
     background:rgba(0, 0, 0, 75%); 
     cursor: pointer;
 }
 .bg-alpha {
     background:rgba(0, 0, 0, 50%); 
-}
-.info:hover {
-    background:rgba(251, 255, 0, 0.75); 
 }
 
 #about {
@@ -174,27 +171,7 @@ figure {
 figure:hover {
     cursor:pointer;
 }
-.photo-1 {
-    border-right: #0A0B25 4px solid;
-}
 
-.photo-2 {
-    border-style: solid;
-    border-color: #0A0B25;
-    border-width: 0px 4px 4px 0px;
-}
-.photo-3 {
-    border-right: #0A0B25 4px solid;
-}
-.photo-4 {
-    border-bottom: #0A0B25 4px solid;
-}
-.height-150 {
-    height:150px;
-}
-.height-300 {
-    height:304px;
-}
 .borderline {
     border: 1px #3c3a70 solid;
 }
@@ -219,24 +196,28 @@ main, #nav {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 320px) { 
+.photo-1, .photo-2, .photo-3, .photo-4, .photo-5 {
+    height: auto;
+    margin: 0px 0px 10px 0px;
+}
+.responsive-img {
+    height: auto;
+    width: 100%; 
+}
     #back {
         background-size: 200% auto;
         background-position: 50% 0px;
     }
-}
-@media (min-width: 320px) and (max-width: 767px) {
-    .photo-1, .photo-2, .photo-3, .photo-4, .photo-5{
-        height: auto;
-    }
-    .hide-border {
-        border: none;
-    }
-    .height-150 {
-    height: auto;
+ 
+.info {
+        bottom: 0;
     }
 
 }
+@media (min-width: 320px) and (max-width: 767px) {
+}
 @media (min-width: 576px) { 
+
     #back {
         background-size: 100% auto;
         background-position: 0px -100px;
@@ -256,10 +237,38 @@ main, #nav {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+.photo-1 {
+    margin: 0px 4px 0px 0px;
+    height: 304px;
+}
+
+.photo-2,.photo-3,.photo-4,.photo-5 {
+    height: 150px;
+}
+    /* borders */
+    .photo-2 {
+    margin: 0px 4px 4px 0px;
+}
+.photo-3 {
+    margin: 0px 4px 0px 0px;
+ }
+.photo-4 {
+    margin: 0px 4px 4px 0px;
+}
+.photo-5 {
+    margin: 0px 4px 0px 0px;
+}
+
+    .responsive-img {
+        height: 100%; 
+        width: 100%;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+}
+
     .post img {
         width: 95%;
         height: auto;
@@ -287,48 +296,42 @@ main, #nav {
     </nav>
   </header>
   <body>
-    <div class="container-fluid shadow-lg bg-purple">
+    <div class="container-fluid container-lg shadow-lg bg-purple">
       <div class="row">
         <div class="col-12">
-          <b:section id="fuck" showaddelement="yes"> 
-            <!--include test.pug -->
-          </b:section>
+          <!--b:section(id="fuck" showaddelement="yes") //include test.pug 
+          -->
         </div>
-        <b:if class="container" cond="data:blog.url == data:blog.homepageUrl">
+        <b:if class="container-fluid" cond="data:blog.url == data:blog.homepageUrl">
           <!--HIGHTLIGHTS POSTS-->
-          <div class="container" id="hightlights">
-            <div class="p-3">
+          <div class="container-fluid" id="hightlights">
+            <div class="py-4">
               <div class="row">
-                <div class="col-12 col-md-6 p-0 m-0">
-                  <article>
-                    <figure class="position-relative photo-1 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-300" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">1</div>
-                    </figure>
-                  </article>
+                <div class="col-12 col-lg-6 p-0 m-0">
+                  <article><a href="#">
+                      <figure class="position-relative photo-1 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">1</div>
+                      </figure></a></article>
                 </div>
-                <div class="col-12 col-md-3 p-0 m-0">
-                  <article>
-                    <figure class="position-relative photo-2 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">2</div>
-                    </figure>
-                  </article>
-                  <article>
-                    <figure class="position-relative photo-3 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">3</div>
-                    </figure>
-                  </article>
+                <div class="col-12 col-lg-3 p-0 m-0">
+                  <article><a href="#">
+                      <figure class="position-relative photo-2 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">2</div>
+                      </figure></a></article>
+                  <article><a href="#">
+                      <figure class="position-relative photo-3 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">3</div>
+                      </figure></a></article>
                 </div>
-                <div class="col-12 col-md-3 p-0 m-0">
-                  <article>
-                    <figure class="position-relative photo-4 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">4444</div>
-                    </figure>
-                  </article>
-                  <article>
-                    <figure class="position-relative photo-5 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">foto 5</div>
-                    </figure>
-                  </article>
+                <div class="col-12 col-lg-3 p-0 m-0">
+                  <article><a href="#">
+                      <figure class="position-relative photo-4 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">4</div>
+                      </figure></a></article>
+                  <article><a href="#">
+                      <figure class="position-relative photo-5 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">5</div>
+                      </figure></a></article>
                 </div>
               </div>
             </div>
@@ -338,7 +341,7 @@ main, #nav {
           <!--RECIENTES-->
           <div class="text-white" id="recientes">
             <h3 class="pb-1 pt-0 pl-1 font-italic border-title h4 px-auto recientes">Articulos Recientes</h3>
-            <article class="col-12 mt-2 mx-0 py-3 p-md-2 rounded-lg border">
+            <article class="col-12 mt-2 mx-0 py-3 p-md-2 rounded-lg">
               <div class="row">
                 <h4 class="h4 p-0 ml-2 m-md-0 d-block d-md-none mb-1 mb-md-3"></h4>
                 <!-- POST TITLE FOR MOBILES--><a class="text-purple" href="&lt;?php the_permalink();?&gt;"></a>
@@ -349,6 +352,9 @@ main, #nav {
                 <div class="col-12 col-md-8">
                   <!-- POST TITLE-->
                   <h4 class="h4 p-0 m-0 d-none d-md-block"><a class="text-purple-2" href="&lt;?php the_permalink();?&gt;">sample title</a></h4>
+                  <p>
+                    <sit>amet, consectetur adipiscing elit. Integer eget nibh ex. Duis sodales condimentum mauris in dignissim. Etiam at sollicitudin lacus, ut cursus libero. Nam nibh enim, vestibulum eu turpis non, luctus volutpat felis</sit>
+                  </p>
                   <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" href="&lt;?php the_permalink();?&gt;">
                      Published 2 days ago - 5 min read - 8 comments
                     <!-- THE EXCERPT--><span class="figure-caption">23-23-23</span></a>
@@ -387,6 +393,24 @@ main, #nav {
         </div>
       </div>
     </div>
+    <script type="text/javascript">//HIGHLIGHTS
+let highlights = document.getElementsByClassName('highlight');
+let info = document.getElementsByClassName('info');
+//change highlight info color to yellow when mouseover
+for(let i = 0;  highlights.length > i; i++){
+
+    highlights[i].addEventListener('mouseover',function() {
+        info[i].style.color = "black";
+        info[i].style.backgroundColor = "rgba(251, 255, 0, 0.75)";  
+    })
+    highlights[i].addEventListener('mouseleave', function() {
+        info[i].style.color = "white";
+        info[i].style.backgroundColor =   "rgba(0, 0, 0, 75%)"; 
+    })
+}
+
+
+    </script>
   </body>
   <footer>
     <div class="container text-white p-1 text-center">

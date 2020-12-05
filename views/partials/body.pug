@@ -1,11 +1,11 @@
-.container-fluid.shadow-lg.bg-purple
+.container-fluid.container-lg.shadow-lg.bg-purple
     .row
         .col-12
-            b:section(id="fuck" showaddelement="yes") 
+            //b:section(id="fuck" showaddelement="yes") 
                 //include test.pug 
-        b:if(cond="data:blog.url == data:blog.homepageUrl").container
+        b:if(cond="data:blog.url == data:blog.homepageUrl").container-fluid
             //HIGHTLIGHTS POSTS
-            #hightlights.container
+            #hightlights.container-fluid
                 include hightlights.pug
 
         .col-12.col-lg-8

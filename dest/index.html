@@ -6,8 +6,7 @@
     <title>Edwin's blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
     <link href="https true://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <b:skin>
-       <![CDATA[.title {
+    <style>.title {
     display:inline-block;
     padding-top:.3125rem;
     padding-bottom:.3125rem;
@@ -71,16 +70,13 @@ a:active, i:active {
     margin: 0px;
     color:white;
     font-weight:100;
-    bottom: 0;
+    bottom: 2;
     position:absolute;
     background:rgba(0, 0, 0, 75%); 
     cursor: pointer;
 }
 .bg-alpha {
     background:rgba(0, 0, 0, 50%); 
-}
-.info:hover {
-    background:rgba(251, 255, 0, 0.75); 
 }
 
 #about {
@@ -174,27 +170,7 @@ figure {
 figure:hover {
     cursor:pointer;
 }
-.photo-1 {
-    border-right: #0A0B25 4px solid;
-}
 
-.photo-2 {
-    border-style: solid;
-    border-color: #0A0B25;
-    border-width: 0px 4px 4px 0px;
-}
-.photo-3 {
-    border-right: #0A0B25 4px solid;
-}
-.photo-4 {
-    border-bottom: #0A0B25 4px solid;
-}
-.height-150 {
-    height:150px;
-}
-.height-300 {
-    height:304px;
-}
 .borderline {
     border: 1px #3c3a70 solid;
 }
@@ -219,24 +195,28 @@ main, #nav {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 320px) { 
+.photo-1, .photo-2, .photo-3, .photo-4, .photo-5 {
+    height: auto;
+    margin: 0px 0px 10px 0px;
+}
+.responsive-img {
+    height: auto;
+    width: 100%; 
+}
     #back {
         background-size: 200% auto;
         background-position: 50% 0px;
     }
-}
-@media (min-width: 320px) and (max-width: 767px) {
-    .photo-1, .photo-2, .photo-3, .photo-4, .photo-5{
-        height: auto;
-    }
-    .hide-border {
-        border: none;
-    }
-    .height-150 {
-    height: auto;
+ 
+.info {
+        bottom: 0;
     }
 
 }
+@media (min-width: 320px) and (max-width: 767px) {
+}
 @media (min-width: 576px) { 
+
     #back {
         background-size: 100% auto;
         background-position: 0px -100px;
@@ -256,10 +236,38 @@ main, #nav {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+.photo-1 {
+    margin: 0px 4px 0px 0px;
+    height: 304px;
+}
+
+.photo-2,.photo-3,.photo-4,.photo-5 {
+    height: 150px;
+}
+    /* borders */
+    .photo-2 {
+    margin: 0px 4px 4px 0px;
+}
+.photo-3 {
+    margin: 0px 4px 0px 0px;
+ }
+.photo-4 {
+    margin: 0px 4px 4px 0px;
+}
+.photo-5 {
+    margin: 0px 4px 0px 0px;
+}
+
+    .responsive-img {
+        height: 100%; 
+        width: 100%;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
+}
+
     .post img {
         width: 95%;
         height: auto;
@@ -267,13 +275,13 @@ main, #nav {
     .post .icon-action {
         width:20px !important;
 }
-      ]]>
-    </b:skin>
+
+    </style>
   </head>
   <!--BANNER - HEADER-->
   <header>
     <nav class="navbar navbar-expand-md yellow-border navbar-dark bg-negro">
-      <div class="container"><a class="navbar-brand" expr:href="data:blog.homepageUrl"><data:blog.title/></a>
+      <div class="container"><a class="navbar-brand" expr:href="data:blog.homepageUrl">Edwin Visuales Blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -287,48 +295,42 @@ main, #nav {
     </nav>
   </header>
   <body>
-    <div class="container-fluid shadow-lg bg-purple">
+    <div class="container-fluid container-lg shadow-lg bg-purple">
       <div class="row">
         <div class="col-12">
-          <b:section id="fuck" showaddelement="yes"> 
-            <!--include test.pug -->
-          </b:section>
+          <!--b:section(id="fuck" showaddelement="yes") //include test.pug 
+          -->
         </div>
-        <b:if class="container" cond="data:blog.url == data:blog.homepageUrl">
+        <b:if class="container-fluid" cond="data:blog.url == data:blog.homepageUrl">
           <!--HIGHTLIGHTS POSTS-->
-          <div class="container" id="hightlights">
-            <div class="p-3">
+          <div class="container-fluid" id="hightlights">
+            <div class="py-4">
               <div class="row">
-                <div class="col-12 col-md-6 p-0 m-0">
-                  <article>
-                    <figure class="position-relative photo-1 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-300" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">1</div>
-                    </figure>
-                  </article>
+                <div class="col-12 col-lg-6 p-0 m-0">
+                  <article><a href="#">
+                      <figure class="position-relative photo-1 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">1</div>
+                      </figure></a></article>
                 </div>
-                <div class="col-12 col-md-3 p-0 m-0">
-                  <article>
-                    <figure class="position-relative photo-2 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">2</div>
-                    </figure>
-                  </article>
-                  <article>
-                    <figure class="position-relative photo-3 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">3</div>
-                    </figure>
-                  </article>
+                <div class="col-12 col-lg-3 p-0 m-0">
+                  <article><a href="#">
+                      <figure class="position-relative photo-2 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">2</div>
+                      </figure></a></article>
+                  <article><a href="#">
+                      <figure class="position-relative photo-3 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">3</div>
+                      </figure></a></article>
                 </div>
-                <div class="col-12 col-md-3 p-0 m-0">
-                  <article>
-                    <figure class="position-relative photo-4 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">4444</div>
-                    </figure>
-                  </article>
-                  <article>
-                    <figure class="position-relative photo-5 hide-border"><img class="img-fluid p-0 mb-2 m-md-0 height-150" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                      <div class="info mb-2 m-md-0">foto 5</div>
-                    </figure>
-                  </article>
+                <div class="col-12 col-lg-3 p-0 m-0">
+                  <article><a href="#">
+                      <figure class="position-relative photo-4 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">4</div>
+                      </figure></a></article>
+                  <article><a href="#">
+                      <figure class="position-relative photo-5 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                        <div class="info">5</div>
+                      </figure></a></article>
                 </div>
               </div>
             </div>
@@ -338,7 +340,7 @@ main, #nav {
           <!--RECIENTES-->
           <div class="text-white" id="recientes">
             <h3 class="pb-1 pt-0 pl-1 font-italic border-title h4 px-auto recientes">Articulos Recientes</h3>
-            <article class="col-12 mt-2 mx-0 py-3 p-md-2 rounded-lg border">
+            <article class="col-12 mt-2 mx-0 py-3 p-md-2 rounded-lg">
               <div class="row">
                 <h4 class="h4 p-0 ml-2 m-md-0 d-block d-md-none mb-1 mb-md-3"></h4>
                 <!-- POST TITLE FOR MOBILES--><a class="text-purple" href="&lt;?php the_permalink();?&gt;"></a>
@@ -349,6 +351,9 @@ main, #nav {
                 <div class="col-12 col-md-8">
                   <!-- POST TITLE-->
                   <h4 class="h4 p-0 m-0 d-none d-md-block"><a class="text-purple-2" href="&lt;?php the_permalink();?&gt;">sample title</a></h4>
+                  <p>
+                    <sit>amet, consectetur adipiscing elit. Integer eget nibh ex. Duis sodales condimentum mauris in dignissim. Etiam at sollicitudin lacus, ut cursus libero. Nam nibh enim, vestibulum eu turpis non, luctus volutpat felis</sit>
+                  </p>
                   <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" href="&lt;?php the_permalink();?&gt;">
                      Published 2 days ago - 5 min read - 8 comments
                     <!-- THE EXCERPT--><span class="figure-caption">23-23-23</span></a>
@@ -361,7 +366,17 @@ main, #nav {
           <!--MAIN SECTION -->
           <main class="container my-3 text-white">
             <b:section id="main" growth="vertical" maxwidgets="" showaddelement="yes">
-              <b:widget class="row" id="Blog1" locked="false" title="Blog Posts" type="Blog" version="1"></b:widget>
+              <div class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex. Duis sodales condimentum mauris in dignissim. Etiam at sollicitudin lacus, ut cursus libero. Nam nibh enim, vestibulum eu turpis non, luctus volutpat felis. Integer orci metus, suscipit vel massa et, consectetur tempus ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dapibus luctus ornare. Praesent at volutpat justo.
+
+Pellentesque nunc tellus, consectetur ut ultrices sit amet, pulvinar eu libero. Nulla egestas, massa a congue auctor, mi eros semper libero, et ultricies sapien mauris vestibulum ligula. Aliquam ut neque ac turpis pellentesque mattis id vitae ligula. Donec dolor tellus, condimentum eu condimentum in, egestas vel eros. Praesent scelerisque diam turpis, consectetur lobortis mi vestibulum eget. Aenean pellentesque, tortor vitae viverra feugiat, metus lorem semper nisi, in auctor sem libero eu ex. Curabitur sit amet eleifend diam, sit amet molestie metus. Pellentesque viverra nisl vitae eros porttitor, ac facilisis nisl vehicula. Pellentesque non nulla lobortis, viverra urna sit amet, commodo velit.
+
+Nullam quis tortor in magna mattis faucibus. Sed at arcu a lacus malesuada sollicitudin. Integer purus elit, lobortis eget bibendum eget, pulvinar id sapien. Aenean mi nibh, maximus ac nunc ut, cursus fermentum arcu. Nullam aliquet ultrices ligula eu imperdiet. Aenean sit amet vehicula diam. Etiam blandit turpis augue, finibus imperdiet ex suscipit non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque commodo ac ligula quis iaculis. Pellentesque porttitor ultricies lacus, elementum pulvinar ante auctor nec. Ut laoreet nunc urna, sed porttitor dui aliquet vitae.
+
+Pellentesque mauris dolor, porttitor euismod ipsum sed, bibendum iaculis dui. In hac habitasse platea dictumst. Quisque in urna sed orci pharetra lobortis sed vitae nisl. Fusce non velit malesuada, cursus erat et, tincidunt diam. Morbi rutrum felis sit amet nisl venenatis, vestibulum rutrum velit ultricies. In hac habitasse platea dictumst. Nulla cursus iaculis purus a laoreet. Suspendisse semper sollicitudin massa, eget fringilla sem. Vivamus at ante ac nulla ornare condimentum.
+
+Nam consequat blandit interdum. Maecenas sollicitudin interdum purus, vel hendrerit velit tincidunt et. Vestibulum nec tempus mauris, vitae consectetur ex. Praesent in congue sapien, eu aliquam erat. Integer lobortis eu lectus in lobortis. In tempus neque commodo sem vestibulum aliquam. Duis fermentum turpis velit, eget porta mi placerat eget. Duis elementum ultrices sapien, non scelerisque lacus suscipit in. Cras lacinia efficitur mauris eget vestibulum. Cras non ex nec nibh cursus bibendum. Nullam ac convallis risus. Nullam varius leo enim, hendrerit rhoncus nibh fermentum a. Vivamus nec nunc sed nisl consequat viverra. Nulla pretium nisl ipsum, a imperdiet risus pretium sit amet.
+
+              </div>
             </b:section>
           </main>
         </div>
@@ -387,6 +402,24 @@ main, #nav {
         </div>
       </div>
     </div>
+    <script type="text/javascript">//HIGHLIGHTS
+let highlights = document.getElementsByClassName('highlight');
+let info = document.getElementsByClassName('info');
+//change highlight info color to yellow when mouseover
+for(let i = 0;  highlights.length > i; i++){
+
+    highlights[i].addEventListener('mouseover',function() {
+        info[i].style.color = "black";
+        info[i].style.backgroundColor = "rgba(251, 255, 0, 0.75)";  
+    })
+    highlights[i].addEventListener('mouseleave', function() {
+        info[i].style.color = "white";
+        info[i].style.backgroundColor =   "rgba(0, 0, 0, 75%)"; 
+    })
+}
+
+
+    </script>
   </body>
   <footer>
     <div class="container text-white p-1 text-center">
