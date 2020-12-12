@@ -1,22 +1,23 @@
-.container-fluid.container-lg.shadow-lg.bg-purple
+.container-fluid.container-lg.bg-light
     .row
-        .col-12
-            //b:section(id="fuck" showaddelement="yes") 
-                //include test.pug 
-        b:if(cond="data:blog.url == data:blog.homepageUrl").container-fluid
+        b:if(cond=cond="data:view.isHomepage").container-fluid
             //HIGHTLIGHTS POSTS
             #hightlights.container-fluid
                 include hightlights.pug
 
-        .col-12.col-lg-8
+        .col-12.col-lg-9
+            b:if(cond="data:view.isHomepage")
+
                 //RECIENTES
-                #recientes.text-white
+                b:section#recientes(growth="horizontal" maxwidgets="" showaddelement="yes")
                     include recientes.pug
-                //MAIN SECTION 
-                main.container.my-3.text-white
-                    include posts.pug
+
+            //MAIN SECTION 
+            main.container.my-3
+                //b:class(name="mt-4" cond="data:view.isHomepage != true")
+                include posts.pug
 
         //RIGHT SIDEBAR
-        #rightbar.col-12.col-lg-4.text-white.radius
+        #rightbar.col-12.col-lg-3.radius
             .container
                 include rightbar.pug

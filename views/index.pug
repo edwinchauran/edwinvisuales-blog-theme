@@ -2,11 +2,13 @@
 html(xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr')
     head
         meta(charset='UTF-8')
+        meta(name="description" content="Edwin Visuales es un freelancer que ha trabajado en diferentes campos de la tecnologia quien te cuenta sus experiencias")
+        meta(name="keywords" content="tecnologia, creatividad, emprendimiento")
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        title Edwin's blog
+        title Edwin Visuales Blog
         link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
-        link(href='https true://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
-        - var html =  true
+        //link(href='https true://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+        - var html = false 
         if html
             style
                 include partials/css/styles.css
@@ -19,10 +21,11 @@ html(xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gm
     //BANNER - HEADER
     header
         include partials/header.pug
-    body
+    body.bg-light
         include partials/body.pug
         script(type="text/javascript")
             include partials/js/scripts.js
+            include partials/js/recientes.js
     footer
         include partials/footer.pug
 

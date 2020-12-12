@@ -1,30 +1,29 @@
-h3.pb-1.pt-0.pl-1.font-italic.border-title.h4.px-auto.recientes
-    |Articulos Recientes
-article.col-12.mt-2.mx-0.py-3.p-md-2.rounded-lg
-    .row
-        h4.h4.p-0.ml-2.m-md-0.d-block.d-md-none.mb-1.mb-md-3
-        // POST TITLE FOR MOBILES
-        a.text-purple(href='<?php the_permalink();?>')
-        // ?php the_title();?
-        figure.figure-img.col-12.col-md-4
-            // POST IMAGE
-            img.my-3.img-fluid.rounded-sm(src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT")
-        .col-12.col-md-8
-            // POST TITLE
-            h4.h4.p-0.m-0.d-none.d-md-block
-                a.text-purple-2(href='<?php the_permalink();?>')
-                    |sample title
-            p
-             sit amet, consectetur adipiscing elit. Integer eget nibh ex. Duis sodales condimentum mauris in dignissim. Etiam at sollicitudin lacus, ut cursus libero. Nam nibh enim, vestibulum eu turpis non, luctus volutpat felis
-            // DATE FOR MOBILES
-            a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(href='<?php the_permalink();?>') 
-                |Published 2 days ago - 5 min read - 8 comments
-                // THE EXCERPT
-                span.figure-caption
-                    |23-23-23
-            // DATE
-            a.text-purple-muted.d-block.d-md-none.p-0.mx-0.mb-0.mt-2(href='#') 
-               |Published 2 days ago - 8 comments
-            a.text-purple-2.d-none.d-md-block.mt-1.bg-purple-hover(href='#') Leer más
-
-
+b:widget#Blog1.row(locked="false" title="Entradas" type="Blog" version="1")
+    //INDIVIDUAL POSTS
+    b:includable(id="main" var="post")
+        b:if(cond="data:view.isHomepage")
+            h3.pb-1.pt-0.pl-1.font-italic.border-title.h4.px-auto.recientes
+                |Articulos Recientes
+            //LOOP
+            b:loop(var='i'  values='data:posts')
+                article.col-12.mt-2.mx-0.py-3.p-md-2.rounded-lg
+                    .row
+                        figure.col-12.col-md-4.figure-img
+                            a(expr:href='data:i.url')
+                                img.my-3.img-fluid.rounded-sm(src="")
+                        .col-12.col-md-8
+                            // POST TITLE
+                            h4.h4.p-0.m-0
+                                a.text-purple-2(expr:href='data:i.url')
+                                   |<data:i.title/>
+                            //RESUME
+                            p.resume.text-justify
+                            // DATE
+                            a.text-purple-muted.d-block.d-md-none.p-0.mx-0.mb-0.mt-2(expr:href='data:posts.url') 
+                                | Publicado en <data:i.timestamp/> - <data:i.numComments/> - comentarios
+                            a.text-purple-2.d-none.d-md-block.mt-1.bg-purple-hover(expr:href='data:posts.url') Leer más
+                            // DATE FOR MOBILES
+                            a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(expr:href='data:posts.url') 
+                                | Publicado en <data:i.timestamp/> - <data:i.numComments/> - comentarios
+                                
+                    |<data:i.body/>

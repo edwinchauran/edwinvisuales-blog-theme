@@ -1,20 +1,33 @@
-nav.navbar.navbar-expand-md.yellow-border.navbar-dark.bg-negro
+nav.navbar.navbar-expand-md.yellow-border.navbar-light
     .container
         a.navbar-brand(expr:href='data:blog.homepageUrl')
             if html
-                | Edwin Visuales Blog
+                .h5.p-0.m-0
+                    | Edwin Visuales blog
             else
-               <data:blog.title/>
+                b:if(cond="data:view.isHomepage")
+                    h1.h5.p-0.m-0
+                        <data:blog.title/>
+                    b:else/
+                    .h5.p-0.m-0
+                        <data:blog.title/>
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
             span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
+                if html
+                    li.nav-item.active
+                        a.nav-link(href="#")
+                            | Inicio 
+                            span.sr-only
+                                | (current)
+                else 
+                    li.nav-item
+                        b:class(name="active" cond='data:view.isHomepage')
+                        a.nav-link(expr:href="data:blog.homepageUrl")
+                            | Inicio 
+                            span.sr-only
+                                | (current)
                 li.nav-item
-                    b:class(name="active" cond='data:blog.pageType == "index"')
-                    a.nav-link(expr:href="data:blog.homepageUrl")
-                        | Inicio 
-                        span.sr-only
-                            | (current)
-                li.nav-item
-                    a.nav-link(href="#")
+                    a.nav-link(href="https://edwinvisuales.blogspot.com/p/sobre-mi.html")
                         | Sobre mi
