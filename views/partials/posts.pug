@@ -1,16 +1,18 @@
 b:section#main(growth="vertical" maxwidgets="" showaddelement="yes")
     if html 
-        article
-            h1 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex
-            a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(href='') 
-                |Edwin Chauran - Published 2 days ago - 5 min read - 8 comments
-            img.my-4.mx-auto.d-block.mb-4.img-fluid.rounded-lg(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')
-            .text-justify
-                include lorem.txt 
+        article.row
+            .col-12
+                h1.text-center
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex
+                img.responsive-img.my-4.img-fluid(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT' style="height:450px")
+            .col-12.col-lg-9
+                a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(href='') 
+                    |Edwin Chauran - Published 2 days ago - 5 min read - 8 comments
+                p
+                    include lorem.pug
+            aside#rightbar.col-12.col-lg-3
+                        include rightbar.pug
     else
-
-
         //INDIVIDUAL POSTS
         b:widget#Blog2.row(locked="false" title="Blog Posts" type="Blog" version="1")
             b:includable(id="post" var="post")
@@ -21,6 +23,4 @@ b:section#main(growth="vertical" maxwidgets="" showaddelement="yes")
                                 |<data:i.title/>
                             a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(href='')
                                 |Edwin Chauran - Published 2 days ago - 5 min read - 8 comments
-                            //img.my-4.mx-auto.d-block.mb-4.img-fluid.rounded-lg(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')
-                            .text-justify
-                                |<data:i.body/>
+                            |<data:i.body/>

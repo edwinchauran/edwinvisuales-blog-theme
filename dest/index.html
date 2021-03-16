@@ -2,10 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
   <head>
     <meta charset="UTF-8"/>
+    <meta name="description" content="Edwin Visuales es un freelancer que ha trabajado en diferentes campos de la tecnologia quien te cuenta sus experiencias"/>
+    <meta name="keywords" content="tecnologia, creatividad, emprendimiento"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Edwin's blog</title>
+    <title>Edwin Visuales Blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
-    <link href="https true://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--link(href='https true://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')  -->
     <style>.title {
     display:inline-block;
     padding-top:.3125rem;
@@ -37,6 +39,12 @@ ul, ol {
 *::selection{
     background:#8c87f7;
     color: white;
+}
+main p {
+    font-size: 1.125rem;
+}
+main span {
+    font-size: 1.125rem;
 }
 a:visited, a:link, a:focus, a:hover, a:active, a:focus-within {
     list-style:none;
@@ -125,10 +133,8 @@ a:active, i:active {
 .bg-blanco {
   background: white linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 25%);
 }
-
-body {
-   background-color: #0A0B25;
-
+.date-header {
+    display:none;
 }
 .text-purple {
     color:#2d2b55;
@@ -162,6 +168,9 @@ footer p {
 }
 hr {
     background:#ffc107;
+}
+.bg-blanco {
+    background:#F7F8F9;
 }
 figure {
     padding: 0px;
@@ -203,6 +212,10 @@ main, #nav {
     height: auto;
     width: 100%; 
 }
+.responsive-img-recientes {
+    width: 100%; 
+    height: 250px;
+}
     #back {
         background-size: 200% auto;
         background-position: 50% 0px;
@@ -214,6 +227,10 @@ main, #nav {
 
 }
 @media (min-width: 320px) and (max-width: 767px) {
+    .border-title {
+        text-align:center;
+        max-width: 1000px;
+    }
 }
 @media (min-width: 576px) { 
 
@@ -238,19 +255,21 @@ main, #nav {
 @media (min-width: 992px) { 
 .photo-1 {
     margin: 0px 4px 0px 0px;
-    height: 304px;
+    height: 504px;
 }
 
 .photo-2,.photo-3,.photo-4,.photo-5 {
-    height: 150px;
+    height: 250px;
 }
     /* borders */
     .photo-2 {
-    margin: 0px 4px 4px 0px;
+    /**change to 0px 4px 4px 0px for adding 2 articles to right more**/
+    margin: 0px 0px 4px 0px;
 }
-.photo-3 {
+/**.photo-3 {
     margin: 0px 4px 0px 0px;
  }
+ **/
 .photo-4 {
     margin: 0px 4px 4px 0px;
 }
@@ -280,129 +299,162 @@ main, #nav {
   </head>
   <!--BANNER - HEADER-->
   <header>
-    <nav class="navbar navbar-expand-md yellow-border navbar-dark bg-negro">
-      <div class="container"><a class="navbar-brand" expr:href="data:blog.homepageUrl">Edwin Visuales Blog</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-negro">
+      <div class="container"><a class="navbar-brand" id="homepage" expr:href="data:blog.homepageUrl">
+          <div class="h5 p-0 m-0">Edwin Visuales blog</div></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <b:class name="active" cond="data:blog.pageType == &quot;index&quot;"></b:class><a class="nav-link" expr:href="data:blog.homepageUrl">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Sobre mi</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="https://edwinvisuales.blogspot.com/p/sobre-mi.html">Sobre mi</a></li>
           </ul>
+          <!--form.form-inline.my-2.my-lg-0
+          input.outline-dark.bg-negro.form-control.mr-sm-2(type='search' placeholder='Buscar' aria-label='Search')
+          button.btn.btn-outline-dark.my-2.my-sm-0(type='submit') Buscar 
+          -->
         </div>
       </div>
     </nav>
+    <!--.container
+    h2.text-center.my-4.text-light
+        | Edwin Visuales blog 
+    -->
   </header>
-  <body>
-    <div class="container-fluid container-lg shadow-lg bg-purple">
-      <div class="row">
-        <div class="col-12">
-          <!--b:section(id="fuck" showaddelement="yes") //include test.pug 
-          -->
-        </div>
-        <b:if class="container-fluid" cond="data:blog.url == data:blog.homepageUrl">
-          <!--HIGHTLIGHTS POSTS-->
-          <div class="container-fluid" id="hightlights">
-            <div class="py-4">
-              <div class="row">
-                <div class="col-12 col-lg-6 p-0 m-0">
-                  <article><a href="#">
-                      <figure class="position-relative photo-1 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                        <div class="info">1</div>
-                      </figure></a></article>
-                </div>
-                <div class="col-12 col-lg-3 p-0 m-0">
-                  <article><a href="#">
-                      <figure class="position-relative photo-2 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                        <div class="info">2</div>
-                      </figure></a></article>
-                  <article><a href="#">
-                      <figure class="position-relative photo-3 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                        <div class="info">3</div>
-                      </figure></a></article>
-                </div>
-                <div class="col-12 col-lg-3 p-0 m-0">
-                  <article><a href="#">
-                      <figure class="position-relative photo-4 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                        <div class="info">4</div>
-                      </figure></a></article>
-                  <article><a href="#">
-                      <figure class="position-relative photo-5 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                        <div class="info">5</div>
-                      </figure></a></article>
-                </div>
-              </div>
+  <body class="bg-purple">
+    <div class="container mt-3 mb-1">
+      <b:if cond="data:view.isHomepage">
+        <!--HIGHTLIGHTS POSTS-->
+        <div id="hightlight">
+          <div class="row">
+            <div class="col-12 col-lg-8 p-0 pr-lg-0">
+              <article><a href="#">
+                  <figure class="position-relative photo-1 highlight"><img class="img-fluid responsive-img" src="https://1.bp.blogspot.com/-Inh7IVohuuc/V_9xBElvbGI/AAAAAAAAA2k/PVeOPkhVDrQrpH5bi-qzZUvqBhyIkNOrgCLcB/s640/conocimiento-internet.jpg"/>
+                    <div class="info">1</div>
+                  </figure></a></article>
             </div>
-          </div>
-        </b:if>
-        <div class="col-12 col-lg-8">
-          <!--RECIENTES-->
-          <div class="text-white" id="recientes">
-            <h3 class="pb-1 pt-0 pl-1 font-italic border-title h4 px-auto recientes">Articulos Recientes</h3>
-            <article class="col-12 mt-2 mx-0 py-3 p-md-2 rounded-lg">
-              <div class="row">
-                <h4 class="h4 p-0 ml-2 m-md-0 d-block d-md-none mb-1 mb-md-3"></h4>
-                <!-- POST TITLE FOR MOBILES--><a class="text-purple" href="&lt;?php the_permalink();?&gt;"></a>
-                <!-- ?php the_title();?-->
-                <figure class="figure-img col-12 col-md-4">
-                  <!-- POST IMAGE--><img class="my-3 img-fluid rounded-sm" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                </figure>
-                <div class="col-12 col-md-8">
-                  <!-- POST TITLE-->
-                  <h4 class="h4 p-0 m-0 d-none d-md-block"><a class="text-purple-2" href="&lt;?php the_permalink();?&gt;">sample title</a></h4>
-                  <p>
-                    <sit>amet, consectetur adipiscing elit. Integer eget nibh ex. Duis sodales condimentum mauris in dignissim. Etiam at sollicitudin lacus, ut cursus libero. Nam nibh enim, vestibulum eu turpis non, luctus volutpat felis</sit>
-                  </p>
-                  <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" href="&lt;?php the_permalink();?&gt;">
-                     Published 2 days ago - 5 min read - 8 comments
-                    <!-- THE EXCERPT--><span class="figure-caption">23-23-23</span></a>
-                  <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" href="#">
-                     Published 2 days ago - 8 comments</a><a class="text-purple-2 d-none d-md-block mt-1 bg-purple-hover" href="#">Leer más</a>
-                </div>
-              </div>
-            </article>
-          </div>
-          <!--MAIN SECTION -->
-          <main class="container my-3 text-white">
-            <b:section id="main" growth="vertical" maxwidgets="" showaddelement="yes">
-              <div class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex. Duis sodales condimentum mauris in dignissim. Etiam at sollicitudin lacus, ut cursus libero. Nam nibh enim, vestibulum eu turpis non, luctus volutpat felis. Integer orci metus, suscipit vel massa et, consectetur tempus ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dapibus luctus ornare. Praesent at volutpat justo.
-
-Pellentesque nunc tellus, consectetur ut ultrices sit amet, pulvinar eu libero. Nulla egestas, massa a congue auctor, mi eros semper libero, et ultricies sapien mauris vestibulum ligula. Aliquam ut neque ac turpis pellentesque mattis id vitae ligula. Donec dolor tellus, condimentum eu condimentum in, egestas vel eros. Praesent scelerisque diam turpis, consectetur lobortis mi vestibulum eget. Aenean pellentesque, tortor vitae viverra feugiat, metus lorem semper nisi, in auctor sem libero eu ex. Curabitur sit amet eleifend diam, sit amet molestie metus. Pellentesque viverra nisl vitae eros porttitor, ac facilisis nisl vehicula. Pellentesque non nulla lobortis, viverra urna sit amet, commodo velit.
-
-Nullam quis tortor in magna mattis faucibus. Sed at arcu a lacus malesuada sollicitudin. Integer purus elit, lobortis eget bibendum eget, pulvinar id sapien. Aenean mi nibh, maximus ac nunc ut, cursus fermentum arcu. Nullam aliquet ultrices ligula eu imperdiet. Aenean sit amet vehicula diam. Etiam blandit turpis augue, finibus imperdiet ex suscipit non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque commodo ac ligula quis iaculis. Pellentesque porttitor ultricies lacus, elementum pulvinar ante auctor nec. Ut laoreet nunc urna, sed porttitor dui aliquet vitae.
-
-Pellentesque mauris dolor, porttitor euismod ipsum sed, bibendum iaculis dui. In hac habitasse platea dictumst. Quisque in urna sed orci pharetra lobortis sed vitae nisl. Fusce non velit malesuada, cursus erat et, tincidunt diam. Morbi rutrum felis sit amet nisl venenatis, vestibulum rutrum velit ultricies. In hac habitasse platea dictumst. Nulla cursus iaculis purus a laoreet. Suspendisse semper sollicitudin massa, eget fringilla sem. Vivamus at ante ac nulla ornare condimentum.
-
-Nam consequat blandit interdum. Maecenas sollicitudin interdum purus, vel hendrerit velit tincidunt et. Vestibulum nec tempus mauris, vitae consectetur ex. Praesent in congue sapien, eu aliquam erat. Integer lobortis eu lectus in lobortis. In tempus neque commodo sem vestibulum aliquam. Duis fermentum turpis velit, eget porta mi placerat eget. Duis elementum ultrices sapien, non scelerisque lacus suscipit in. Cras lacinia efficitur mauris eget vestibulum. Cras non ex nec nibh cursus bibendum. Nullam ac convallis risus. Nullam varius leo enim, hendrerit rhoncus nibh fermentum a. Vivamus nec nunc sed nisl consequat viverra. Nulla pretium nisl ipsum, a imperdiet risus pretium sit amet.
-
-              </div>
-            </b:section>
-          </main>
-        </div>
-        <!--RIGHT SIDEBAR-->
-        <div class="col-12 col-lg-4 text-white radius" id="rightbar">
-          <div class="container">
-            <b:section id="sidebar" preferred="yes" showaddelement="yes">
-              <!--search-->
-            </b:section>
-            <!--#about
-            .d-flex.pt-2
-                i#openSearch.material-icons.text-white.p-1 search
-                input#buscador(type='search')
-            
+            <div class="col-12 col-lg-4 p-0 pl-lg-0 pb-0 mb-0">
+              <article><a href="#">
+                  <figure class="position-relative photo-2 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                    <div class="info">2</div>
+                  </figure></a></article>
+              <article><a href="#">
+                  <figure class="position-relative photo-3 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
+                    <div class="info">3</div>
+                  </figure></a></article>
+            </div>
+            <!--.col-12.col-lg-3.p-0.m-0
+            article
+                a(href="#")
+                    figure.position-relative.photo-4.highlight
+                        img.img-fluid.responsive-img(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')
+                        .info
+                            | 4
+            article
+                a(href="#")
+                    figure.position-relative.photo-5.highlight
+                        img.img-fluid.responsive-img(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')
+                        .info
+                            | 5
             -->
-            <p class="h5 my-2 font-italic border-title pb-1">Artículos Destacados </p><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-            <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-            <hr/><img class="img-fluid my-2" src="https://1.bp.blogspot.com/-5ZbYcvfgEUY/X39dCs0tCAI/AAAAAAAAEFs/1LoxLrIt2HQycOknWc6jAHdS-VjDOucpQCLcBGAsYHQ/s16000/ad03.png" alt="..."/>
-            <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-            <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-            <hr/>
           </div>
         </div>
-      </div>
+        <!--RECIENTES-->
+      </b:if>
     </div>
-    <script type="text/javascript">//HIGHLIGHTS
+    <div class="container mt-4">
+      <b:section id="recientes" growth="horizontal" maxwidgets="" showaddelement="yes">
+        <b:widget id="Blog1" locked="false" title="Entradas" type="Blog" version="1">
+          <!--INDIVIDUAL POSTS-->
+          <b:includable id="main" var="post">
+            <h3 class="font-italic border-title h4 text-white pb-1">Articulos Recientes</h3>
+            <div class="row">
+              <!--LOOP-->
+              <article class="col-12 col-lg-4">
+                <figure class="figure-img"><a expr:href="data:i.url"><img class="responsive-img-recientes my-2 img-fluid" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/></a>
+                  <!-- POST TITLE-->
+                  <h4 class="h4 p-0 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url">
+                      Las ventajas de ser autodidacta
+                      <data:i.title/></a></h4>
+                  <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" expr:href="data:posts.url">
+                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
+                  <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" expr:href="data:posts.url">
+                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
+                </figure>
+              </article>
+              <article class="col-12 col-lg-4">
+                <figure class="figure-img"><a expr:href="data:i.url"><img class="responsive-img-recientes my-2 img-fluid" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/></a>
+                  <!-- POST TITLE-->
+                  <h4 class="h4 p-0 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url">
+                      Las ventajas de ser autodidacta
+                      <data:i.title/></a></h4>
+                  <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" expr:href="data:posts.url">
+                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
+                  <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" expr:href="data:posts.url">
+                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
+                </figure>
+              </article>
+              <article class="col-12 col-lg-4">
+                <figure class="figure-img"><a expr:href="data:i.url"><img class="responsive-img-recientes my-2 img-fluid" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/></a>
+                  <!-- POST TITLE-->
+                  <h4 class="h4 p-0 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url">
+                      Las ventajas de ser autodidacta
+                      <data:i.title/></a></h4>
+                  <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" expr:href="data:posts.url">
+                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
+                  <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" expr:href="data:posts.url">
+                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
+                </figure>
+              </article>
+            </div>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+    <div class="container mt-4">
+      <!--MAIN SECTION -->
+      <main class="my-3 text-light">
+        <b:class name="mt-4" cond="data:view.isHomepage != true">
+          <b:section id="main" growth="vertical" maxwidgets="" showaddelement="yes">
+            <article class="row">
+              <div class="col-12">
+                <h1 class="text-center">
+                  <Lorem>ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex</Lorem>
+                </h1><img class="responsive-img my-4 img-fluid" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" style="height:450px"/>
+              </div>
+              <div class="col-12 col-lg-9"><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" href="">
+                   Edwin Chauran - Published 2 days ago - 5 min read - 8 comments</a>
+                <p>
+                  <Lorem>ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex. Duis sodales condimentum mauris in dignissim. Etiam at sollicitudin lacus, ut cursus libero. Nam nibh enim, vestibulum eu turpis non, luctus volutpat felis. Integer orci metus, suscipit vel massa et, consectetur tempus ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dapibus luctus ornare. Praesent at volutpat justo.</Lorem><br/><br/>
+                  <Pellentesque>nunc tellus, consectetur ut ultrices sit amet, pulvinar eu libero. Nulla egestas, massa a congue auctor, mi eros semper libero, et ultricies sapien mauris vestibulum ligula. Aliquam ut neque ac turpis pellentesque mattis id vitae ligula. Donec dolor tellus, condimentum eu condimentum in, egestas vel eros. Praesent scelerisque diam turpis, consectetur lobortis mi vestibulum eget. Aenean pellentesque, tortor vitae viverra feugiat, metus lorem semper nisi, in auctor sem libero eu ex. Curabitur sit amet eleifend diam, sit amet molestie metus. Pellentesque viverra nisl vitae eros porttitor, ac facilisis nisl vehicula. Pellentesque non nulla lobortis, viverra urna sit amet, commodo velit.</Pellentesque><br/><br/>
+                  <Nullam>quis tortor in magna mattis faucibus. Sed at arcu a lacus malesuada sollicitudin. Integer purus elit, lobortis eget bibendum eget, pulvinar id sapien. Aenean mi nibh, maximus ac nunc ut, cursus fermentum arcu. Nullam aliquet ultrices ligula eu imperdiet. Aenean sit amet vehicula diam. Etiam blandit turpis augue, finibus imperdiet ex suscipit non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque commodo ac ligula quis iaculis. Pellentesque porttitor ultricies lacus, elementum pulvinar ante auctor nec. Ut laoreet nunc urna, sed porttitor dui aliquet vitae.</Nullam><br/><br/>
+                  <Pellentesque>mauris dolor, porttitor euismod ipsum sed, bibendum iaculis dui. In hac habitasse platea dictumst. Quisque in urna sed orci pharetra lobortis sed vitae nisl. Fusce non velit malesuada, cursus erat et, tincidunt diam. Morbi rutrum felis sit amet nisl venenatis, vestibulum rutrum velit ultricies. In hac habitasse platea dictumst. Nulla cursus iaculis purus a laoreet. Suspendisse semper sollicitudin massa, eget fringilla sem. Vivamus at ante ac nulla ornare condimentum.</Pellentesque><br/><br/>
+                  <Nam>consequat blandit interdum. Maecenas sollicitudin interdum purus, vel hendrerit velit tincidunt et. Vestibulum nec tempus mauris, vitae consectetur ex. Praesent in congue sapien, eu aliquam erat. Integer lobortis eu lectus in lobortis. In tempus neque commodo sem vestibulum aliquam. Duis fermentum turpis velit, eget porta mi placerat eget. Duis elementum ultrices sapien, non scelerisque lacus suscipit in. Cras lacinia efficitur mauris eget vestibulum. Cras non ex nec nibh cursus bibendum. Nullam ac convallis risus. Nullam varius leo enim, hendrerit rhoncus nibh fermentum a. Vivamus nec nunc sed nisl consequat viverra. Nulla pretium nisl ipsum, a imperdiet risus pretium sit amet.</Nam>
+                </p>
+              </div>
+              <aside class="col-12 col-lg-3" id="rightbar">
+                <b:section id="sidebar" preferred="yes" showaddelement="yes">
+                  <!--search-->
+                </b:section>
+                <!--#about
+                .d-flex.pt-2
+                    i#openSearch.material-icons.text-white.p-1 search
+                    input#buscador(type='search')
+                
+                -->
+                <p class="h5 my-2 font-italic border-title pb-1 text-light mt-4">Artículos Relacionados</p><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                <hr/><img class="img-fluid my-2" src="https://1.bp.blogspot.com/-5ZbYcvfgEUY/X39dCs0tCAI/AAAAAAAAEFs/1LoxLrIt2HQycOknWc6jAHdS-VjDOucpQCLcBGAsYHQ/s16000/ad03.png" alt="..."/>
+                <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                <hr/>
+              </aside>
+            </article>
+          </b:section>
+        </b:class>
+      </main>
+    </div>
+    <script type="text/javascript">
+      //HIGHLIGHTS
 let highlights = document.getElementsByClassName('highlight');
 let info = document.getElementsByClassName('info');
 //change highlight info color to yellow when mouseover
@@ -418,6 +470,59 @@ for(let i = 0;  highlights.length > i; i++){
     })
 }
 
+document.querySelector(".navbar-toggler").addEventListener("click", function(e){ document.querySelector("#navbarSupportedContent").classList.toggle("show"); });
+      let recientes = document.getElementById("recientes");
+    articles = recientes.getElementsByTagName("article"),
+    spans = recientes.getElementsByTagName("span"),
+    oldImg = recientes.querySelectorAll("img[border]"),
+    dir = document.querySelectorAll("div[dir='ltr']");
+    main = document.getElementsByTagName("main");
+    articulosRecientes = [];
+    var texto;
+function deleteBlogPost(){
+    //borra main section
+    main[0].style.display = "none";
+    //borrar spans
+    for(let i = 0; dir.length > i; i++) {
+        dir[i].style.display = "none";
+    }
+    for(let i = 0; spans.length > i; i++) {
+        spans[i].style.display = "none";
+    }
+    //borrar imagenes
+    for(let i = 0; oldImg.length >  i; i++) {
+        oldImg[i].style.display = "none";
+    }
+}
+function getArticles(articles){
+    for(let i = 0; articles.length > i; i++) {
+        articulosRecientes.push({
+            "thumbnail": articles[i].querySelectorAll('img[border="0"]')[0].getAttribute("src"),
+            "text": articles[i].getElementsByTagName("span")[0].textContent
+        });
+    }
+}
+function addArticles(){
+   for(let i = 0; articles.length > i; i++){
+        articles[i].getElementsByClassName("img-fluid")[0].setAttribute("src", articulosRecientes[i].thumbnail);
+        //texto = document.createTextNode(articulosRecientes[i].text)
+        //articles[i].getElementsByClassName("resume")[0].appendChild(texto);
+
+    }
+}
+document.addEventListener('DOMContentLoaded', function(e) {
+    var link = document.querySelector('#homepage');
+    if (link.href == window.location.href) {
+        deleteBlogPost();
+        getArticles(articles);
+        addArticles();
+  }
+})
+
+function fuck("fuck") {
+var fuck = 0
+
+}
 
     </script>
   </body>

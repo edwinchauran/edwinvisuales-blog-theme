@@ -1,23 +1,14 @@
-.container-fluid.container-lg.bg-light
-    .row
-        b:if(cond=cond="data:view.isHomepage").container-fluid
-            //HIGHTLIGHTS POSTS
-            #hightlights.container-fluid
-                include hightlights.pug
-
-        .col-12.col-lg-9
-            b:if(cond="data:view.isHomepage")
-
-                //RECIENTES
-                b:section#recientes(growth="horizontal" maxwidgets="" showaddelement="yes")
-                    include recientes.pug
-
-            //MAIN SECTION 
-            main.container.my-3
-                //b:class(name="mt-4" cond="data:view.isHomepage != true")
-                include posts.pug
-
-        //RIGHT SIDEBAR
-        #rightbar.col-12.col-lg-3.radius
-            .container
-                include rightbar.pug
+.container.mt-3.mb-1
+    b:if(cond="data:view.isHomepage")
+        //HIGHTLIGHTS POSTS
+        #hightlight
+            include hightlights.pug
+        //RECIENTES
+.container.mt-4
+        b:section#recientes(growth="horizontal" maxwidgets="" showaddelement="yes")
+            include recientes.pug
+.container.mt-4
+    //MAIN SECTION 
+    main.my-3.text-light
+        b:class(name="mt-4" cond="data:view.isHomepage != true")
+            include posts.pug

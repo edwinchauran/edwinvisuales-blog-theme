@@ -30,6 +30,12 @@ ul, ol {
     background:#8c87f7;
     color: white;
 }
+main p {
+    font-size: 1.125rem;
+}
+main span {
+    font-size: 1.125rem;
+}
 a:visited, a:link, a:focus, a:hover, a:active, a:focus-within {
     list-style:none;
     text-decoration: none;
@@ -153,6 +159,9 @@ footer p {
 hr {
     background:#ffc107;
 }
+.bg-blanco {
+    background:#F7F8F9;
+}
 figure {
     padding: 0px;
     margin: 0px;
@@ -193,6 +202,10 @@ main, #nav {
     height: auto;
     width: 100%; 
 }
+.responsive-img-recientes {
+    width: 100%; 
+    height: 250px;
+}
     #back {
         background-size: 200% auto;
         background-position: 50% 0px;
@@ -204,6 +217,10 @@ main, #nav {
 
 }
 @media (min-width: 320px) and (max-width: 767px) {
+    .border-title {
+        text-align:center;
+        max-width: 1000px;
+    }
 }
 @media (min-width: 576px) { 
 
@@ -228,19 +245,21 @@ main, #nav {
 @media (min-width: 992px) { 
 .photo-1 {
     margin: 0px 4px 0px 0px;
-    height: 304px;
+    height: 504px;
 }
 
 .photo-2,.photo-3,.photo-4,.photo-5 {
-    height: 150px;
+    height: 250px;
 }
     /* borders */
     .photo-2 {
-    margin: 0px 4px 4px 0px;
+    /**change to 0px 4px 4px 0px for adding 2 articles to right more**/
+    margin: 0px 0px 4px 0px;
 }
-.photo-3 {
+/**.photo-3 {
     margin: 0px 4px 0px 0px;
  }
+ **/
 .photo-4 {
     margin: 0px 4px 4px 0px;
 }
