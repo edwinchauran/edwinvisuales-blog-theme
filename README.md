@@ -23,7 +23,6 @@ npm run build
 
 * [Bootstrap](https://getbootstrap.com/)
 * [Pugjs](https://pugjs.org/)
-* [Jquery](https://jquery.com/)
 
 ## Autor
 
