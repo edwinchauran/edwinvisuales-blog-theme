@@ -1,52 +1,77 @@
-let recientes = document.getElementById("recientes");
-    articles = recientes.getElementsByTagName("article"),
-    spans = recientes.getElementsByTagName("span"),
-    oldImg = recientes.querySelectorAll("img[border]"),
-    dir = document.querySelectorAll("div[dir='ltr']");
-    main = document.getElementsByTagName("main");
-    articulosRecientes = [];
-    var texto;
+//articlesPosts
+let posts = document.getElementById("posts"),
+    articles = posts.getElementsByClassName("publicaciones"),
+    articlesPosts = [], //recientes recientes = document.getElementById("recientes"),
+    articlesRecientes = recientes.getElementsByTagName("article"), 
+    //hls
+    hls = document.getElementById("hightlights"), 
+    highArticles = hightlights.getElementsByTagName("article");
+
+var texto, urls;
 function deleteBlogPost(){
     //borra main section
-    main[0].style.display = "none";
+    posts.style.display = "none";
     //borrar spans
-    for(let i = 0; dir.length > i; i++) {
-        dir[i].style.display = "none";
-    }
-    for(let i = 0; spans.length > i; i++) {
-        spans[i].style.display = "none";
-    }
-    //borrar imagenes
-    for(let i = 0; oldImg.length >  i; i++) {
-        oldImg[i].style.display = "none";
-    }
 }
+
 function getArticles(articles){
-    for(let i = 0; articles.length > i; i++) {
-        articulosRecientes.push({
-            "thumbnail": articles[i].querySelectorAll('img[border="0"]')[0].getAttribute("src"),
-            "text": articles[i].getElementsByTagName("span")[0].textContent
+    //insertamos todos los posts en un array
+    let i = 0;
+    while(3 > i) {
+        articlesPosts.push({
+            //get the first image of the article
+            "thumbnail": articles[i].querySelectorAll('a > img')[1].getAttribute("src"),
+            //"text": articles[i].getElementsByClassName("span")[0].textContent,
+            "articleTitle":articles[i].querySelectorAll("h4")[0].textContent,
+            "articleUrl": articles[i].querySelectorAll("a")[0].getAttribute("href")
         });
+        i++;
     }
 }
 function addArticles(){
-   for(let i = 0; articles.length > i; i++){
-        articles[i].getElementsByClassName("img-fluid")[0].setAttribute("src", articulosRecientes[i].thumbnail);
-        //texto = document.createTextNode(articulosRecientes[i].text)
+    //articlesRecientes = 3;
+    //articles = 4; 
+   let i = 0;
+   while(3 > i){
+        //insersion de imagen 
+        articlesRecientes[i].getElementsByClassName("img-fluid")[0]
+        .setAttribute("src", articlesPosts[i].thumbnail);
+        
+        //insersion de titulo
+        texto = document.createTextNode(articlesPosts[i].articleTitle);
+        articlesRecientes[i].getElementsByTagName("a")[1].appendChild(texto);
         //articles[i].getElementsByClassName("resume")[0].appendChild(texto);
-
+       
+        //insersion de urls
+        urls = articlesRecientes[i].getElementsByTagName("a");
+        for(let a = 0; urls.length > a; a++){
+           urls[a].setAttribute("href", articlesPosts[i].articleUrl); 
+        }
+        i++;
+    }
+}
+function addHighlights(){
+    //highArticles = 3;
+    //articles = 4; 
+    let i = 0;
+    while(3 > i) {
+        //insersion de imagen 
+        highArticles[i].getElementsByClassName("img-fluid")[0]
+        .setAttribute("src", articlesPosts[i].thumbnail);
+        
+        //insersion de titulo
+        texto = document.createTextNode(articlesPosts[i].articleTitle);
+        highArticles[i].getElementsByClassName("info")[0].appendChild(texto);
+       
+        //insersion de urls
+        highArticles[i].getElementsByTagName("a")[0]
+        .setAttribute("href", articlesPosts[i].articleUrl); 
+        i++;
     }
 }
 document.addEventListener('DOMContentLoaded', function(e) {
-    var link = document.querySelector('#homepage');
-    if (link.href == window.location.href) {
-        deleteBlogPost();
-        getArticles(articles);
-        addArticles();
-  }
+    getArticles(articles);
+    deleteBlogPost();
+    addHighlights();
+    addArticles();
 })
-
-function fuck("fuck") {
-var fuck = 0
-
-}

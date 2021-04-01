@@ -83,6 +83,10 @@ a:active, i:active {
     background:rgba(0, 0, 0, 75%); 
     cursor: pointer;
 }
+.article-img {
+    height:300px;
+    width: 100%;
+}
 .bg-alpha {
     background:rgba(0, 0, 0, 50%); 
 }
@@ -214,7 +218,6 @@ main, #nav {
 }
 .responsive-img-recientes {
     width: 100%; 
-    height: 250px;
 }
     #back {
         background-size: 200% auto;
@@ -253,6 +256,9 @@ main, #nav {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+.article-img {
+    height:600px;
+}
 .photo-1 {
     margin: 0px 4px 0px 0px;
     height: 504px;
@@ -301,7 +307,7 @@ main, #nav {
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-negro">
       <div class="container"><a class="navbar-brand" id="homepage" expr:href="data:blog.homepageUrl">
-          <div class="h5 p-0 m-0">Edwin Visuales blog</div></a>
+          <div class="h5 p-0 m-0">name blog</div></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -369,40 +375,34 @@ main, #nav {
             <h3 class="font-italic border-title h4 text-white pb-1">Articulos Recientes</h3>
             <div class="row">
               <!--LOOP-->
-              <article class="col-12 col-lg-4">
+              <article class="col-12 col-lg-4 p-0 p-lg-2 mb-3 mb-md-auto">
                 <figure class="figure-img"><a expr:href="data:i.url"><img class="responsive-img-recientes my-2 img-fluid" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/></a>
                   <!-- POST TITLE-->
-                  <h4 class="h4 p-0 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url">
+                  <h4 class="p-1 p-md-0 h4 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url">
                       Las ventajas de ser autodidacta
                       <data:i.title/></a></h4>
-                  <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" expr:href="data:posts.url">
-                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
-                  <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" expr:href="data:posts.url">
+                  <!-- DATE--><a class="text-purple-muted mx-0 mb-0 mt-2 p-1 p-md-0" expr:href="data:posts.url">
                      00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
                 </figure>
               </article>
-              <article class="col-12 col-lg-4">
+              <article class="col-12 col-lg-4 p-0 p-lg-2 mb-3 mb-lg-auto">
                 <figure class="figure-img"><a expr:href="data:i.url"><img class="responsive-img-recientes my-2 img-fluid" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/></a>
                   <!-- POST TITLE-->
-                  <h4 class="h4 p-0 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url">
+                  <h4 class="p-1 p-md-0 h4 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url">
                       Las ventajas de ser autodidacta
                       <data:i.title/></a></h4>
-                  <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" expr:href="data:posts.url">
-                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
-                  <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" expr:href="data:posts.url">
+                  <!-- DATE--><a class="text-purple-muted mx-0 mb-0 mt-2 p-1 p-md-0" expr:href="data:posts.url">
                      00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
                 </figure>
               </article>
-              <article class="col-12 col-lg-4">
+              <article class="col-12 col-lg-4 p-0 p-lg-2 mb-3 mb-lg-auto">
                 <figure class="figure-img"><a expr:href="data:i.url"><img class="responsive-img-recientes my-2 img-fluid" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/></a>
                   <!-- POST TITLE-->
-                  <h4 class="h4 p-0 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url">
+                  <h4 class="p-1 p-md-0 h4 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url">
                       Las ventajas de ser autodidacta
                       <data:i.title/></a></h4>
-                  <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" expr:href="data:posts.url">
-                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
-                  <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" expr:href="data:posts.url">
-                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a>
+                  <!-- DATE--><a class="text-purple-muted mx-0 mb-0 mt-2 p-1 p-md-0" expr:href="data:posts.url">
+                     00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios</a><data:i.body/>
                 </figure>
               </article>
             </div>
@@ -416,13 +416,11 @@ main, #nav {
         <b:class name="mt-4" cond="data:view.isHomepage != true">
           <b:section id="main" growth="vertical" maxwidgets="" showaddelement="yes">
             <article class="row">
-              <div class="col-12">
-                <h1 class="text-center">
-                  <Lorem>ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex</Lorem>
-                </h1><img class="responsive-img my-4 img-fluid" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" style="height:450px"/>
+              <div class="col-12 p-0 p-md-auto">
+                <h1 class="text-center mb-3 mx-1 m-lg-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex</h1><a class="text-center text-purple-muted my-2 figure-caption d-none d-md-block" href="">
+                   Edwin Chauran - Published 2 days ago - 5 min read - 8 comments</a><img class="mb-4 img-fluid article-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
               </div>
-              <div class="col-12 col-lg-9"><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" href="">
-                   Edwin Chauran - Published 2 days ago - 5 min read - 8 comments</a>
+              <div class="col-12 col-lg-9">
                 <p>
                   <Lorem>ipsum dolor sit amet, consectetur adipiscing elit. Integer eget nibh ex. Duis sodales condimentum mauris in dignissim. Etiam at sollicitudin lacus, ut cursus libero. Nam nibh enim, vestibulum eu turpis non, luctus volutpat felis. Integer orci metus, suscipit vel massa et, consectetur tempus ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse dapibus luctus ornare. Praesent at volutpat justo.</Lorem><br/><br/>
                   <Pellentesque>nunc tellus, consectetur ut ultrices sit amet, pulvinar eu libero. Nulla egestas, massa a congue auctor, mi eros semper libero, et ultricies sapien mauris vestibulum ligula. Aliquam ut neque ac turpis pellentesque mattis id vitae ligula. Donec dolor tellus, condimentum eu condimentum in, egestas vel eros. Praesent scelerisque diam turpis, consectetur lobortis mi vestibulum eget. Aenean pellentesque, tortor vitae viverra feugiat, metus lorem semper nisi, in auctor sem libero eu ex. Curabitur sit amet eleifend diam, sit amet molestie metus. Pellentesque viverra nisl vitae eros porttitor, ac facilisis nisl vehicula. Pellentesque non nulla lobortis, viverra urna sit amet, commodo velit.</Pellentesque><br/><br/>
@@ -431,7 +429,7 @@ main, #nav {
                   <Nam>consequat blandit interdum. Maecenas sollicitudin interdum purus, vel hendrerit velit tincidunt et. Vestibulum nec tempus mauris, vitae consectetur ex. Praesent in congue sapien, eu aliquam erat. Integer lobortis eu lectus in lobortis. In tempus neque commodo sem vestibulum aliquam. Duis fermentum turpis velit, eget porta mi placerat eget. Duis elementum ultrices sapien, non scelerisque lacus suscipit in. Cras lacinia efficitur mauris eget vestibulum. Cras non ex nec nibh cursus bibendum. Nullam ac convallis risus. Nullam varius leo enim, hendrerit rhoncus nibh fermentum a. Vivamus nec nunc sed nisl consequat viverra. Nulla pretium nisl ipsum, a imperdiet risus pretium sit amet.</Nam>
                 </p>
               </div>
-              <aside class="col-12 col-lg-3" id="rightbar">
+              <aside class="col-12 col-lg-3 p-0" id="rightbar">
                 <b:section id="sidebar" preferred="yes" showaddelement="yes">
                   <!--search-->
                 </b:section>
@@ -469,7 +467,6 @@ for(let i = 0;  highlights.length > i; i++){
         info[i].style.backgroundColor =   "rgba(0, 0, 0, 75%)"; 
     })
 }
-
 document.querySelector(".navbar-toggler").addEventListener("click", function(e){ document.querySelector("#navbarSupportedContent").classList.toggle("show"); });
       let recientes = document.getElementById("recientes");
     articles = recientes.getElementsByTagName("article"),
@@ -518,11 +515,6 @@ document.addEventListener('DOMContentLoaded', function(e) {
         addArticles();
   }
 })
-
-function fuck("fuck") {
-var fuck = 0
-
-}
 
     </script>
   </body>

@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+<html b:css="false" b:js="false" expr:lang="data:blog.locale" expr:dir="data:blog.languageDirection" b:responsive="true" b:defaultwidgetversion="2" b:layoutsVersion="3" b:templateVersion="1.3.0" mlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
   <head>
+    <script>window.addEventListener("load", function(){
+	var load_screen = document.getElementById("load_screen");
+	document.body.removeChild(load_screen);
+});
+
+
+    </script><b:include data='blog' name='all-head-content'/>
     <meta charset="UTF-8"/>
+    <!--data:description-->
     <meta name="description" content="Edwin Visuales es un freelancer que ha trabajado en diferentes campos de la tecnologia quien te cuenta sus experiencias"/>
-    <meta name="keywords" content="tecnologia, creatividad, emprendimiento"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Edwin Visuales Blog</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
-    <!--link(href='https true://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')-->
+    <meta name="keywords" content="tecnologia, creatividad, emprendimiento"/><meta expr:content='data:blog.isMobile ? &quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1&quot; : &quot;width=device-width,initial-scale=1&quot;' name='viewport'/> 
+    <!--meta(name='viewport' content='width=device-width, initial-scale=1.0')-->
+    <title>
+      <b:if cond="data:view.isHomepage"><data:blog.title/>                </b:if>
+      <b:if cond="data:view.isHomepage != true"><data:view.title/> - <data:blog.title/>                </b:if>
+    </title>
+    <!--link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')-->
+    <!--link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css")-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
+    <!--link(href='https true://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')  -->
     <b:skin>
-       <![CDATA[.title {
+       <![CDATA[/**
+-----------------------------------------------
+Name:    edwinvisuales blog
+Designer: Edwin Chauran 
+-----------------------------------------------
+**/
+
+div#load_screen{
+	background: #fff;
+	opacity: 1;
+    position:fixed;
+    z-index:110;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+div#load_screen > div#loading{
+	color:#000;
+    font-size:20px;
+	width:120px;
+	height:24px;
+	margin: 300px auto;
+}
+.title {
     display:inline-block;
     padding-top:.3125rem;
     padding-bottom:.3125rem;
@@ -40,6 +76,12 @@ ul, ol {
 *::selection{
     background:#8c87f7;
     color: white;
+}
+main p {
+    font-size: 1.125rem;
+}
+main span {
+    font-size: 1.125rem;
 }
 a:visited, a:link, a:focus, a:hover, a:active, a:focus-within {
     list-style:none;
@@ -77,6 +119,10 @@ a:active, i:active {
     position:absolute;
     background:rgba(0, 0, 0, 75%); 
     cursor: pointer;
+}
+.article-img {
+    height:300px;
+    width: 100%;
 }
 .bg-alpha {
     background:rgba(0, 0, 0, 50%); 
@@ -150,6 +196,7 @@ nav a, nav i{
     color: white;
 }
 nav  {
+    z-index:151;
     border-bottom:#ffc107;
 } 
 
@@ -209,7 +256,6 @@ main, #nav {
 }
 .responsive-img-recientes {
     width: 100%; 
-    height: 250px;
 }
     #back {
         background-size: 200% auto;
@@ -222,6 +268,10 @@ main, #nav {
 
 }
 @media (min-width: 320px) and (max-width: 767px) {
+    .border-title {
+        text-align:center;
+        max-width: 1000px;
+    }
 }
 @media (min-width: 576px) { 
 
@@ -244,6 +294,9 @@ main, #nav {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+.article-img {
+    height:600px;
+}
 .photo-1 {
     margin: 0px 4px 0px 0px;
     height: 504px;
@@ -254,11 +307,13 @@ main, #nav {
 }
     /* borders */
     .photo-2 {
-    margin: 0px 4px 4px 0px;
+    /**change to 0px 4px 4px 0px for adding 2 articles to right more**/
+    margin: 0px 0px 4px 0px;
 }
-.photo-3 {
+/**.photo-3 {
     margin: 0px 4px 0px 0px;
  }
+ **/
 .photo-4 {
     margin: 0px 4px 4px 0px;
 }
@@ -287,11 +342,12 @@ main, #nav {
     </b:skin>
   </head>
   <!--BANNER - HEADER-->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light">
+  <!--header-->
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-negro navbar-fixed-top">
       <div class="container"><a class="navbar-brand" id="homepage" expr:href="data:blog.homepageUrl">
           <b:if cond="data:view.isHomepage">
-            <h1 class="h5 p-0 m-0"><data:blog.title/></h1>
+            <div class="h5 p-0 m-0"><data:blog.title/></div>
             <b:else/>
             <div class="h5 p-0 m-0"><data:blog.title/></div>
           </b:if></a>
@@ -303,132 +359,106 @@ main, #nav {
             </li>
             <li class="nav-item"><a class="nav-link" href="https://edwinvisuales.blogspot.com/p/sobre-mi.html">Sobre mi</a></li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          <!--form.form-inline.my-2.my-lg-0
+          input.outline-dark.bg-negro.form-control.mr-sm-2(type='search' placeholder='Buscar' aria-label='Search')
+          button.btn.btn-outline-dark.my-2.my-sm-0(type='submit') Buscar 
+          -->
         </div>
       </div>
     </nav>
-  </header>
-  <body class="bg-blanco">
-    <div class="container-fluid">
-      <div class="row">
-        <b:if cond="data:view.isHomepage">
-          <!--HIGHTLIGHTS POSTS-->
-          <div class="container-fluid px-lg-4" id="hightlights">
-            <div class="py-4">
-              <div class="row">
-                <div class="col-12 col-lg-8 p-0 m-0">
-                  <article><a href="#">
-                      <figure class="position-relative photo-1 highlight"><img class="img-fluid responsive-img" src="https://1.bp.blogspot.com/-Inh7IVohuuc/V_9xBElvbGI/AAAAAAAAA2k/PVeOPkhVDrQrpH5bi-qzZUvqBhyIkNOrgCLcB/s640/conocimiento-internet.jpg"/>
-                        <div class="info">1</div>
-                      </figure></a></article>
-                </div>
-                <div class="col-12 col-lg-4 p-0 m-0">
-                  <article><a href="#">
-                      <figure class="position-relative photo-2 highlight"><img class="img-fluid responsive-img" src="https://1.bp.blogspot.com/-9vmNer8qa_4/XLXzrfvMIqI/AAAAAAAADjE/wXLy79o0g8kMp2PFTR11HedC4ZBH1F_1ACK4BGAYYCw/s640/1_d27A5K4i63BktGDEg25hqA.jpeg"/>
-                        <div class="info">2</div>
-                      </figure></a></article>
-                  <article><a href="#">
-                      <figure class="position-relative photo-3 highlight"><img class="img-fluid responsive-img" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT"/>
-                        <div class="info">3</div>
-                      </figure></a></article>
-                </div>
-                <!--.col-12.col-lg-3.p-0.m-0
-                article
-                    a(href="#")
-                        figure.position-relative.photo-4.highlight
-                            img.img-fluid.responsive-img(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')
-                            .info
-                                | 4
-                article
-                    a(href="#")
-                        figure.position-relative.photo-5.highlight
-                            img.img-fluid.responsive-img(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')
-                            .info
-                                | 5
-                -->
-              </div>
+    <div id="load_screen">
+      <div id="loading">loading</div>
+    </div>
+    <b:if cond="data:view.isHomepage">
+      <div class="container mt-3 mb-1">
+        <!--HIGHTLIGHTS POSTS-->
+        <div id="hightlights">
+          <div class="row">
+            <div class="col-12 col-lg-8 p-0 pr-lg-0">
+              <article><a href="">
+                  <figure class="position-relative photo-1 highlight"><img class="img-fluid responsive-img" src=""/>
+                    <div class="info"></div>
+                  </figure></a></article>
+            </div>
+            <div class="col-12 col-lg-4 p-0 pl-lg-0 pb-0 mb-0">
+              <article><a href="">
+                  <figure class="position-relative photo-2 highlight"><img class="img-fluid responsive-img" src=""/>
+                    <div class="info"></div>
+                  </figure></a></article>
+              <article><a href="">
+                  <figure class="position-relative photo-3 highlight"><img class="img-fluid responsive-img" src=""/>
+                    <div class="info"></div>
+                  </figure></a></article>
             </div>
           </div>
-        </b:if>
-        <div class="col-12">
-          <!--RECIENTES-->
-          <b:section id="recientes" growth="horizontal" maxwidgets="" showaddelement="yes">
-            <b:widget id="Blog1" locked="false" title="Entradas" type="Blog" version="1">
-              <!--INDIVIDUAL POSTS-->
-              <b:includable id="main" var="post">
-                <b:if cond="data:view.isHomepage">
-                  <h3 class="pb-1 pt-0 pl-1 font-italic border-title h4 px-auto recientes">Articulos Recientes</h3>
-                  <div class="row">
-                    <!--LOOP-->
-                    <b:loop var="i" values="data:posts">
-                      <article class="col-12 col-lg-4">
-                        <figure class="figure-img"><a expr:href="data:i.url"><img class="responsive-img-recientes my-3 img-fluid" src=""/></a>
-                          <!-- POST TITLE-->
-                          <h4 class="h4 p-0 m-0 col-12 col-4"><a class="text-purple-2" expr:href="data:i.url"><data:i.title/></a></h4>
-                          <!-- DATE--><a class="text-purple-muted d-block d-md-none p-0 mx-0 mb-0 mt-2" expr:href="data:posts.url">
-                              <data:i.timestamp/> - <data:i.numComments/> - comentarios</a>
-                          <!-- DATE FOR MOBILES--><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" expr:href="data:posts.url">
-                              <data:i.timestamp/> - <data:i.numComments/> - comentarios</a>
-                        </figure><data:i.body/>
-                      </article>
-                    </b:loop>
-                  </div>
-                </b:if>
-              </b:includable>
-            </b:widget>
-          </b:section>
         </div>
       </div>
-    </div>
+      <!--RECIENTES-->
+      <main class="container mt-4" id="recientes">
+        <h3 class="font-italic border-title h4 pb-1">Articulos Recientes</h3>
+        <div class="row" id="articulos">
+          <!--LOOP-->
+          <article class="col-12 col-lg-4 p-0 p-lg-2 mb-3 mb-md-auto">
+            <figure class="figure-img"><a href=""><img class="responsive-img-recientes my-2 img-fluid" src=""/></a>
+              <!-- POST TITLE-->
+              <h4 class="p-1 p-md-0 h4 m-0 col-12 col-4"><a class="text-purple-2" href=""></a></h4>
+              <!-- DATE--><a class="text-purple-muted mx-0 mb-0 mt-2 p-1 p-md-0" href=""> </a>
+            </figure>
+          </article>
+          <article class="col-12 col-lg-4 p-0 p-lg-2 mb-3 mb-md-auto">
+            <figure class="figure-img"><a href=""><img class="responsive-img-recientes my-2 img-fluid" src=""/></a>
+              <!-- POST TITLE-->
+              <h4 class="p-1 p-md-0 h4 m-0 col-12 col-4"><a class="text-purple-2" href=""></a></h4>
+              <!-- DATE--><a class="text-purple-muted mx-0 mb-0 mt-2 p-1 p-md-0" href=""> </a>
+            </figure>
+          </article>
+          <article class="col-12 col-lg-4 p-0 p-lg-2 mb-3 mb-md-auto">
+            <figure class="figure-img"><a href=""><img class="responsive-img-recientes my-2 img-fluid" src=""/></a>
+              <!-- POST TITLE-->
+              <h4 class="p-1 p-md-0 h4 m-0 col-12 col-4"><a class="text-purple-2" href=""></a></h4>
+              <!-- DATE--><a class="text-purple-muted mx-0 mb-0 mt-2 p-1 p-md-0" href=""> </a>
+            </figure>
+          </article>
+        </div>
+      </main>
+    </b:if>
+    <!--MAIN SECTION-->
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-9">
-          <!--MAIN SECTION -->
-          <main class="container my-3">
-            <b:class name="mt-4" cond="data:view.isHomepage != true"></b:class>
-            <b:section id="main" growth="vertical" maxwidgets="" showaddelement="yes">
-              <!--INDIVIDUAL POSTS-->
-              <b:widget class="row" id="Blog2" locked="false" title="Blog Posts" type="Blog" version="1">
-                <b:includable id="post" var="post">
-                  <b:if cond="data:view.isPost">
-                    <b:loop var="i" values="data:posts">
-                      <article>
-                        <h1><data:i.title/></h1><a class="text-purple-muted mt-1 mb-2 figure-caption d-none d-md-block" href="">Edwin Chauran - Published 2 days ago - 5 min read - 8 comments</a>
-                        <!--img.my-4.mx-auto.d-block.mb-4.img-fluid.rounded-lg(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')-->
-                        <div class="text-justify"><data:i.body/></div>
-                      </article>
-                    </b:loop>
-                  </b:if>
-                </b:includable>
-              </b:widget>
-            </b:section>
-          </main>
-        </div>
-        <!--RIGHT SIDEBAR-->
-        <div class="col-12 col-lg-3" id="rightbar">
-          <b:section id="sidebar" preferred="yes" showaddelement="yes">
-            <!--search-->
-          </b:section>
-          <!--#about
-          .d-flex.pt-2
-              i#openSearch.material-icons.text-white.p-1 search
-              input#buscador(type='search')
-          
-          -->
-          <p class="h5 my-2 font-italic border-title pb-1">Artículos Destacados </p><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-          <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-          <hr/><img class="img-fluid my-2" src="https://1.bp.blogspot.com/-5ZbYcvfgEUY/X39dCs0tCAI/AAAAAAAAEFs/1LoxLrIt2HQycOknWc6jAHdS-VjDOucpQCLcBGAsYHQ/s16000/ad03.png" alt="..."/>
-          <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-          <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-          <hr/>
-        </div>
-      </div>
+      <b:section id="posts" growth="horizontal" maxwidgets="" showaddelement="yes">
+        <b:widget id="Blog1" locked="false" title="Entradas" type="Blog" version="1">
+          <b:includable id="main" var="post">
+            <b:loop var="i" values="data:posts">
+              <div class="row publicaciones">
+                <div class="col-12 p-0 md-auto">
+                  <h4 class="h1 text-center mb-3 mx-1 m-lg-0"><data:i.title/></h4><a class="text-center my-2 figure-caption d-none d-md-block" expr:href="data:i.url"><data:i.timestamp/> - <data:i.numComments/> - comentarios</a>
+                  <figure><a expr:href="data:i.url"><img class="mb-4 img-fluid article-img" src=""/></a></figure>
+                </div>
+                <div class="col-12 col-lg-9">
+                  <div class="container"><data:i.body/></div>
+                </div>
+                <aside class="col-12 col-lg-3 p-0" id="rightbar">
+                  <!--b:section#sidebar(preferred="yes" showaddelement="yes")//search
+                  -->
+                  <!--#about
+                  .d-flex.pt-2
+                      i#openSearch.material-icons.text-white.p-1 search
+                      input#buscador(type='search')
+                  
+                  -->
+                  <p class="h5 my-2 font-italic border-title pb-1 mt-4">Artículos Relacionados</p><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                  <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                  <hr/><img class="img-fluid my-2" src="https://1.bp.blogspot.com/-5ZbYcvfgEUY/X39dCs0tCAI/AAAAAAAAEFs/1LoxLrIt2HQycOknWc6jAHdS-VjDOucpQCLcBGAsYHQ/s16000/ad03.png" alt="..."/>
+                  <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                  <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                  <hr/>
+                </aside>
+              </div>
+            </b:loop>
+          </b:includable>
+        </b:widget>
+      </b:section>
     </div>
-    <script type="text/javascript">
-      //HIGHLIGHTS
+    <script type="text/javascript">//HIGHLIGHTS
 let highlights = document.getElementsByClassName('highlight');
 let info = document.getElementsByClassName('info');
 //change highlight info color to yellow when mouseover
@@ -443,61 +473,94 @@ for(let i = 0;  highlights.length > i; i++){
         info[i].style.backgroundColor =   "rgba(0, 0, 0, 75%)"; 
     })
 }
+//document.querySelector(".navbar-toggler").addEventListener("click", function(e){ document.querySelector("#navbarSupportedContent").classList.toggle("show"); });
 
-document.querySelector(".navbar-toggler").addEventListener("click", function(e){ document.querySelector("#navbarSupportedContent").classList.toggle("show"); });
-      let recientes = document.getElementById("recientes");
-    articles = recientes.getElementsByTagName("article"),
-    spans = recientes.getElementsByTagName("span"),
-    oldImg = recientes.querySelectorAll("img[border]"),
-    dir = document.querySelectorAll("div[dir='ltr']");
-    main = document.getElementsByTagName("main");
-    articulosRecientes = [];
-    var texto;
+    </script>
+    <b:if cond="data:view.isHomepage">
+      <script type="text/javascript">//articlesPosts
+let posts = document.getElementById("posts"),
+    articles = posts.getElementsByClassName("publicaciones"),
+    articlesPosts = [], //recientes recientes = document.getElementById("recientes"),
+    articlesRecientes = recientes.getElementsByTagName("article"), 
+    //hls
+    hls = document.getElementById("hightlights"), 
+    highArticles = hightlights.getElementsByTagName("article");
+
+var texto, urls;
 function deleteBlogPost(){
     //borra main section
-    main[0].style.display = "none";
+    posts.style.display = "none";
     //borrar spans
-    for(let i = 0; dir.length > i; i++) {
-        dir[i].style.display = "none";
-    }
-    for(let i = 0; spans.length > i; i++) {
-        spans[i].style.display = "none";
-    }
-    //borrar imagenes
-    for(let i = 0; oldImg.length >  i; i++) {
-        oldImg[i].style.display = "none";
-    }
 }
+
 function getArticles(articles){
-    for(let i = 0; articles.length > i; i++) {
-        articulosRecientes.push({
-            "thumbnail": articles[i].querySelectorAll('img[border="0"]')[0].getAttribute("src"),
-            "text": articles[i].getElementsByTagName("span")[0].textContent
+    //insertamos todos los posts en un array
+    let i = 0;
+    while(3 > i) {
+        articlesPosts.push({
+            //get the first image of the article
+            "thumbnail": articles[i].querySelectorAll('a > img')[1].getAttribute("src"),
+            //"text": articles[i].getElementsByClassName("span")[0].textContent,
+            "articleTitle":articles[i].querySelectorAll("h4")[0].textContent,
+            "articleUrl": articles[i].querySelectorAll("a")[0].getAttribute("href")
         });
+        i++;
     }
 }
 function addArticles(){
-   for(let i = 0; articles.length > i; i++){
-        articles[i].getElementsByClassName("img-fluid")[0].setAttribute("src", articulosRecientes[i].thumbnail);
-        //texto = document.createTextNode(articulosRecientes[i].text)
+    //articlesRecientes = 3;
+    //articles = 4; 
+   let i = 0;
+   while(3 > i){
+        //insersion de imagen 
+        articlesRecientes[i].getElementsByClassName("img-fluid")[0]
+        .setAttribute("src", articlesPosts[i].thumbnail);
+        
+        //insersion de titulo
+        texto = document.createTextNode(articlesPosts[i].articleTitle);
+        articlesRecientes[i].getElementsByTagName("a")[1].appendChild(texto);
         //articles[i].getElementsByClassName("resume")[0].appendChild(texto);
-
+       
+        //insersion de urls
+        urls = articlesRecientes[i].getElementsByTagName("a");
+        for(let a = 0; urls.length > a; a++){
+           urls[a].setAttribute("href", articlesPosts[i].articleUrl); 
+        }
+        i++;
+    }
+}
+function addHighlights(){
+    //highArticles = 3;
+    //articles = 4; 
+    let i = 0;
+    while(3 > i) {
+        //insersion de imagen 
+        highArticles[i].getElementsByClassName("img-fluid")[0]
+        .setAttribute("src", articlesPosts[i].thumbnail);
+        
+        //insersion de titulo
+        texto = document.createTextNode(articlesPosts[i].articleTitle);
+        highArticles[i].getElementsByClassName("info")[0].appendChild(texto);
+       
+        //insersion de urls
+        highArticles[i].getElementsByTagName("a")[0]
+        .setAttribute("href", articlesPosts[i].articleUrl); 
+        i++;
     }
 }
 document.addEventListener('DOMContentLoaded', function(e) {
-    var link = document.querySelector('#homepage');
-    if (link.href == window.location.href) {
-        deleteBlogPost();
-        getArticles(articles);
-        addArticles();
-  }
+    getArticles(articles);
+    deleteBlogPost();
+    addHighlights();
+    addArticles();
 })
 
-    </script>
+      </script>
+    </b:if>
   </body>
   <footer>
     <div class="container text-white p-1 text-center">
-      <b:section id="footer" preferred="yes" showaddelement="yes"></b:section>
+      <!--b:section#footer(preferred="yes" showaddelement="yes")-->
       <p class="my-auto">Blogger Theme designed by Edwin Visuales | 2020 </p>
       <div class="col-2 d-none-d-xl-block" style="background-color:black;"></div>
       <!--script include js/scripts.js

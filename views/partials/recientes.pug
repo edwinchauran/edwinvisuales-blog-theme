@@ -1,76 +1,9 @@
-b:widget#Blog1(locked="false" title="Entradas" type="Blog" version="1")
-    //INDIVIDUAL POSTS
-    b:includable(id="main" var="post")
-        h3.font-italic.border-title.h4.text-white.pb-1
-            |Articulos Recientes
-        .row
-            if html
-               //LOOP
-               article.col-12.col-lg-4
-                    figure.figure-img
-                        a(expr:href='data:i.url')
-                            img.responsive-img-recientes.my-2.img-fluid(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')
-                        // POST TITLE
-                        h4.h4.p-0.m-0.col-12.col-4
-                            a.text-purple-2(expr:href='data:i.url')
-                                |Las ventajas de ser autodidacta
-                                |<data:i.title/>
-                        // DATE
-                        a.text-purple-muted.d-block.d-md-none.p-0.mx-0.mb-0.mt-2(expr:href='data:posts.url') 
-                            | 00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios
-                        // DATE FOR MOBILES
-                        a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(expr:href='data:posts.url') 
-                            | 00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios
-
-
-               article.col-12.col-lg-4
-                    figure.figure-img
-                        a(expr:href='data:i.url')
-                            img.responsive-img-recientes.my-2.img-fluid(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')
-                        // POST TITLE
-                        h4.h4.p-0.m-0.col-12.col-4
-                            a.text-purple-2(expr:href='data:i.url')
-                                |Las ventajas de ser autodidacta
-                                |<data:i.title/>
-                        // DATE
-                        a.text-purple-muted.d-block.d-md-none.p-0.mx-0.mb-0.mt-2(expr:href='data:posts.url') 
-                            | 00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios
-                        // DATE FOR MOBILES
-                        a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(expr:href='data:posts.url') 
-                            | 00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios
-
-
-               article.col-12.col-lg-4
-                    figure.figure-img
-                        a(expr:href='data:i.url')
-                            img.responsive-img-recientes.my-2.img-fluid(src='https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT')
-                        // POST TITLE
-                        h4.h4.p-0.m-0.col-12.col-4
-                            a.text-purple-2(expr:href='data:i.url')
-                                |Las ventajas de ser autodidacta
-                                |<data:i.title/>
-                        // DATE
-                        a.text-purple-muted.d-block.d-md-none.p-0.mx-0.mb-0.mt-2(expr:href='data:posts.url') 
-                            | 00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios
-                        // DATE FOR MOBILES
-                        a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(expr:href='data:posts.url') 
-                            | 00/00/00 <data:i.timestamp/> - 8 <data:i.numComments/> - comentarios
-
-            else
-                //LOOP
-                b:loop(var='i'  values='data:posts')
-                   article.col-12.col-lg-4
-                        figure.figure-img
-                            a(expr:href='data:i.url')
-                                img.responsive-img-recientes.my-3.img-fluid(src="")
-                            // POST TITLE
-                            h4.h4.p-0.m-0.col-12.col-4
-                                a.text-purple-2(expr:href='data:i.url')
-                                    |<data:i.title/>
-                            // DATE
-                            a.text-purple-muted.d-block.d-md-none.p-0.mx-0.mb-0.mt-2(expr:href='data:posts.url') 
-                                |  <data:i.timestamp/> - <data:i.numComments/> - comentarios
-                            // DATE FOR MOBILES
-                            a.text-purple-muted.mt-1.mb-2.figure-caption.d-none.d-md-block(expr:href='data:posts.url') 
-                                |  <data:i.timestamp/> - <data:i.numComments/> - comentarios
-                        |<data:i.body/>
+article.col-12.col-lg-4.p-0.p-lg-2.mb-3.mb-md-auto
+    figure.figure-img
+        a(href='')
+            img.responsive-img-recientes.my-2.img-fluid(src='')
+        // POST TITLE
+        h4.p-1.p-md-0.h4.m-0.col-12.col-4
+            a.text-purple-2(href='')
+        // DATE
+        a.text-purple-muted.mx-0.mb-0.mt-2.p-1.p-md-0(href='') 

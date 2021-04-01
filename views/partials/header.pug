@@ -1,17 +1,16 @@
-nav.navbar.navbar-expand-lg.navbar-dark.bg-negro
+nav.navbar.navbar-expand-lg.navbar-dark.bg-negro.navbar-fixed-top
     .container
         a.navbar-brand#homepage(expr:href='data:blog.homepageUrl')
             if html
                 .h5.p-0.m-0
-                    | Edwin Visuales blog
+                    | name blog
             else
                 b:if(cond="data:view.isHomepage")
-                    h1.h5.p-0.m-0
+                    .h5.p-0.m-0
                         <data:blog.title/>
                     b:else/
                     .h5.p-0.m-0
                         <data:blog.title/>
- 
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
             span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
@@ -36,6 +35,4 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-negro
             //form.form-inline.my-2.my-lg-0
                 input.outline-dark.bg-negro.form-control.mr-sm-2(type='search' placeholder='Buscar' aria-label='Search')
                 button.btn.btn-outline-dark.my-2.my-sm-0(type='submit') Buscar 
-//.container
-    h2.text-center.my-4.text-light
-        | Edwin Visuales blog 
+

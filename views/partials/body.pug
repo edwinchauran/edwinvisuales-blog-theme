@@ -1,14 +1,22 @@
-.container.mt-3.mb-1
-    b:if(cond="data:view.isHomepage")
+#load_screen
+    #loading
+        | loading
+
+b:if(cond="data:view.isHomepage")
+    .container.mt-3.mb-1
         //HIGHTLIGHTS POSTS
-        #hightlight
+        #hightlights
             include hightlights.pug
-        //RECIENTES
-.container.mt-4
-        b:section#recientes(growth="horizontal" maxwidgets="" showaddelement="yes")
+    //RECIENTES
+    main#recientes.container.mt-4
+        h3.font-italic.border-title.h4.pb-1
+            |Articulos Recientes
+        .row#articulos
+            //LOOP
             include recientes.pug
-.container.mt-4
-    //MAIN SECTION 
-    main.my-3.text-light
-        b:class(name="mt-4" cond="data:view.isHomepage != true")
-            include posts.pug
+            include recientes.pug
+            include recientes.pug
+//MAIN SECTION
+.container
+    b:section#posts(growth="horizontal" maxwidgets="" showaddelement="yes")
+        include blog.pug
