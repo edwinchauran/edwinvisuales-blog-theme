@@ -30,6 +30,9 @@ div#load_screen > div#loading{
     line-height:inherit;
     white-space:nowrap;
 } 
+.header-title {
+    margin-top: 60px;
+}
 .yellow-border {
     border-bottom: 1px;
     border-color: #ffc107;
@@ -206,7 +209,7 @@ figure:hover {
 }
 .border-title {
     border-bottom: 2px #ffc107 solid;
-    max-width: 210px;
+    max-width: 212px;
 }
 #redes {
     position:absolute;

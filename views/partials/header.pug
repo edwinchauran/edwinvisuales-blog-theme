@@ -1,36 +1,62 @@
-nav.navbar.navbar-expand-lg.navbar-dark.bg-negro.navbar-fixed-top
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
     .container
-        a.navbar-brand#homepage(expr:href='data:blog.homepageUrl')
-            if html
+        a.navbar-brand(expr:href='data:blog.homepageUrl')
+            i.bi-house-door.d-block.d-lg-none
+            //if html
                 .h5.p-0.m-0
                     | name blog
-            else
+            //else
                 b:if(cond="data:view.isHomepage")
                     .h5.p-0.m-0
-                        <data:blog.title/>
+                        |<data:blog.title/>
                     b:else/
                     .h5.p-0.m-0
-                        <data:blog.title/>
-        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                        |<data:blog.title/>
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
             span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
                 if html
                     li.nav-item.active
-                        a.nav-link(href="#")
+                        a.nav-link(expr:href="data:blog.homepageUrl")
                             | Inicio 
                             span.sr-only
                                 | (current)
                 else 
                     li.nav-item
-                        b:class(name="active" cond='data:view.isHomepage')
                         a.nav-link(expr:href="data:blog.homepageUrl")
+                            b:class(name="active" cond='data:view.isHomepage')
                             | Inicio 
-                            span.sr-only
-                                | (current)
-                li.nav-item
-                    a.nav-link(href="https://edwinvisuales.blogspot.com/p/sobre-mi.html")
-                        | Sobre mi
+                    li.nav-item
+                        a.nav-link.disabled
+                            | Programación
+                    li.nav-item
+                        a.nav-link.disabled
+                            | Audiovisuales
+                    li.nav-item
+                        a.nav-link(href="https://edwinvisuales.blogspot.com/p/sobre-mi.html")
+                            b:class(name="active" cond='data:view.url == "https://edwinvisuales.blogspot.com/p/sobre-mi.html"')
+                            | Sobre mi
+            //redes sociales
+            .d-none.d-lg-block.ms-auto.text-light.h6.my-auto
+                a(href="#")
+                    i.bi-facebook.mx-2(role="img" aria-label="Facebook")
+                a(href="#")
+                    i.bi-instagram.mx-2(role="img" aria-label="Instagram")
+                a(href="#")
+                    i.bi-github.mx-2(role="img" aria-label="GitHub")
+                a(href="#")
+                    i.bi-twitter.mx-2(role="img" aria-label="Twitter")
+            .d-block.d-lg-none.text-light.h4.mt-4.text-center
+                a(href="#")
+                    i.bi-facebook.mx-4(role="img" aria-label="Facebook")
+                a(href="#")
+                    i.bi-instagram.mx-4(role="img" aria-label="Instagram")
+                a(href="#")
+                    i.bi-github.mx-4(role="img" aria-label="GitHub")
+                a(href="#")
+                    i.bi-twitter.mx-4(role="img" aria-label="Twitter")
+
 
             //form.form-inline.my-2.my-lg-0
                 input.outline-dark.bg-negro.form-control.mr-sm-2(type='search' placeholder='Buscar' aria-label='Search')

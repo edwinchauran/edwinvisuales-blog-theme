@@ -69,9 +69,9 @@ function addHighlights(){
         i++;
     }
 }
-document.addEventListener('DOMContentLoaded', function(e) {
+//document.addEventListener('DOMContentLoaded', function(e) {
     getArticles(articles);
     deleteBlogPost();
     addHighlights();
     addArticles();
-})
+//})

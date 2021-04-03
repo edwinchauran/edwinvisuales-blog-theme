@@ -13,4 +13,3 @@ for(let i = 0;  highlights.length > i; i++){
         info[i].style.backgroundColor =   "rgba(0, 0, 0, 75%)"; 
     })
 }
-//document.querySelector(".navbar-toggler").addEventListener("click", function(e){ document.querySelector("#navbarSupportedContent").classList.toggle("show"); });

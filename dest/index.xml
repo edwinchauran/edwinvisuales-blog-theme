@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<html b:css="false" b:js="false" expr:lang="data:blog.locale" expr:dir="data:blog.languageDirection" b:responsive="true" b:defaultwidgetversion="2" b:layoutsVersion="3" b:templateVersion="1.3.0" mlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
-  <head>
-    <script>window.addEventListener("load", function(){
+<html b:css="false" b:js="false" expr:lang="data:blog.locale" expr:dir="data:blog.languageDirection" b:responsive="true" b:defaultwidgetversion="2" b:layoutsVersion="3" b:templateVersion="1.3.0" mlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><head>
+  <script>window.addEventListener("load", function(){
 	var load_screen = document.getElementById("load_screen");
 	document.body.removeChild(load_screen);
 });
 
 
-    </script><b:include data='blog' name='all-head-content'/>
-    <meta charset="UTF-8"/>
-    <!--data:description-->
-    <meta name="description" content="Edwin Visuales es un freelancer que ha trabajado en diferentes campos de la tecnologia quien te cuenta sus experiencias"/>
-    <meta name="keywords" content="tecnologia, creatividad, emprendimiento"/><meta expr:content='data:blog.isMobile ? &quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1&quot; : &quot;width=device-width,initial-scale=1&quot;' name='viewport'/> 
-    <!--meta(name='viewport' content='width=device-width, initial-scale=1.0')-->
-    <title>
-      <b:if cond="data:view.isHomepage"><data:blog.title/>                </b:if>
-      <b:if cond="data:view.isHomepage != true"><data:view.title/> - <data:blog.title/>                </b:if>
-    </title>
-    <!--link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')-->
-    <!--link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css")-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
-    <!--link(href='https true://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')  -->
-    <b:skin>
-       <![CDATA[/**
+  </script><b:include data='blog' name='all-head-content'/>
+  <meta charset="UTF-8"/>
+  <!--data:description-->
+  <meta name="description" content="Edwin Visuales es un freelancer que ha trabajado en diferentes campos de la tecnologia quien te cuenta sus experiencias"/>
+  <meta name="keywords" content="tecnologia, creatividad, emprendimiento"/><meta expr:content='data:blog.isMobile ? &quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1&quot; : &quot;width=device-width,initial-scale=1&quot;' name='viewport'/> 
+  <!--meta(name='viewport' content='width=device-width, initial-scale=1.0')-->
+  <title>
+    <b:if cond="data:view.isHomepage"><data:blog.title/>                </b:if>
+    <b:if cond="data:view.isHomepage != true"><data:view.title/> - <data:blog.title/>                </b:if>
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
+  <b:skin>
+     <![CDATA[/**
 -----------------------------------------------
 Name:    edwinvisuales blog
 Designer: Edwin Chauran 
@@ -54,6 +51,9 @@ div#load_screen > div#loading{
     line-height:inherit;
     white-space:nowrap;
 } 
+.header-title {
+    margin-top: 60px;
+}
 .yellow-border {
     border-bottom: 1px;
     border-color: #ffc107;
@@ -230,7 +230,7 @@ figure:hover {
 }
 .border-title {
     border-bottom: 2px #ffc107 solid;
-    max-width: 210px;
+    max-width: 212px;
 }
 #redes {
     position:absolute;
@@ -338,27 +338,37 @@ main, #nav {
     .post .icon-action {
         width:20px !important;
 }
-      ]]>
-    </b:skin>
-  </head>
-  <!--BANNER - HEADER-->
-  <!--header-->
+    ]]>
+  </b:skin>&lt;!--</head>
+  <!--Body-->
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-negro navbar-fixed-top">
-      <div class="container"><a class="navbar-brand" id="homepage" expr:href="data:blog.homepageUrl">
-          <b:if cond="data:view.isHomepage">
-            <div class="h5 p-0 m-0"><data:blog.title/></div>
-            <b:else/>
-            <div class="h5 p-0 m-0"><data:blog.title/></div>
-          </b:if></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container"><a class="navbar-brand" expr:href="data:blog.homepageUrl"><i class="bi-house-door d-block d-lg-none"></i>
+          <!--if html
+          .h5.p-0.m-0
+              | name blog
+          -->
+          <!--else
+          b:if(cond="data:view.isHomepage")
+              .h5.p-0.m-0
+                  |<data:blog.title/>
+              b:else/
+              .h5.p-0.m-0
+                  |<data:blog.title/>
+          --></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <b:class name="active" cond="data:view.isHomepage"></b:class><a class="nav-link" expr:href="data:blog.homepageUrl">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="https://edwinvisuales.blogspot.com/p/sobre-mi.html">Sobre mi</a></li>
+            <li class="nav-item"><a class="nav-link" expr:href="data:blog.homepageUrl">
+                <b:class name="active" cond="data:view.isHomepage"></b:class>Inicio </a></li>
+            <li class="nav-item"><a class="nav-link disabled">Programación</a></li>
+            <li class="nav-item"><a class="nav-link disabled">Audiovisuales</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://edwinvisuales.blogspot.com/p/sobre-mi.html">
+                <b:class name="active" cond="data:view.url == &quot;https://edwinvisuales.blogspot.com/p/sobre-mi.html&quot;"></b:class>Sobre mi</a></li>
           </ul>
+          <!--redes sociales-->
+          <div class="d-none d-lg-block ms-auto text-light h6 my-auto"><a href="#"><i class="bi-facebook mx-2" role="img" aria-label="Facebook"></i></a><a href="#"><i class="bi-instagram mx-2" role="img" aria-label="Instagram"></i></a><a href="#"><i class="bi-github mx-2" role="img" aria-label="GitHub"></i></a><a href="#"><i class="bi-twitter mx-2" role="img" aria-label="Twitter"></i></a></div>
+          <div class="d-block d-lg-none text-light h4 mt-4 text-center"><a href="#"><i class="bi-facebook mx-4" role="img" aria-label="Facebook"></i></a><a href="#"><i class="bi-instagram mx-4" role="img" aria-label="Instagram"></i></a><a href="#"><i class="bi-github mx-4" role="img" aria-label="GitHub"></i></a><a href="#"><i class="bi-twitter mx-4" role="img" aria-label="Twitter"></i></a></div>
           <!--form.form-inline.my-2.my-lg-0
           input.outline-dark.bg-negro.form-control.mr-sm-2(type='search' placeholder='Buscar' aria-label='Search')
           button.btn.btn-outline-dark.my-2.my-sm-0(type='submit') Buscar 
@@ -366,6 +376,13 @@ main, #nav {
         </div>
       </div>
     </nav>
+    <div class="w-100 header-title p-3">
+      <b:if cond="data:view.isHomepage">
+        <h1 class="text-center"><strong><data:blog.title/></strong></h1>
+        <b:else/>
+        <h2 class="text-center"><strong><data:blog.title/></strong></h2>
+      </b:if>
+    </div>
     <div id="load_screen">
       <div id="loading">loading</div>
     </div>
@@ -427,37 +444,41 @@ main, #nav {
       <b:section id="posts" growth="horizontal" maxwidgets="" showaddelement="yes">
         <b:widget id="Blog1" locked="false" title="Entradas" type="Blog" version="1">
           <b:includable id="main" var="post">
-            <b:loop var="i" values="data:posts">
-              <div class="row publicaciones">
-                <div class="col-12 p-0 md-auto">
-                  <h4 class="h1 text-center mb-3 mx-1 m-lg-0"><data:i.title/></h4><a class="text-center my-2 figure-caption d-none d-md-block" expr:href="data:i.url"><data:i.timestamp/> - <data:i.numComments/> - comentarios</a>
-                  <figure><a expr:href="data:i.url"><img class="mb-4 img-fluid article-img" src=""/></a></figure>
+            <div class="container">
+              <b:loop var="i" values="data:posts">
+                <div class="row publicaciones">
+                  <div class="col-12 p-0 md-auto">
+                    <h4 class="h1 text-center mb-3 mx-1 m-lg-0"><data:i.title/></h4>
+                    <b:if cond="data:view.isPost || data:view.isHomepage"><a class="text-center my-2 figure-caption" expr:href="data:i.url"><data:i.timestamp/> - <data:i.numComments/> - comentarios</a>
+                      <figure><a expr:href="data:i.url"><img class="mb-4 img-fluid article-img" src=""/></a></figure>
+                    </b:if>
+                  </div>
+                  <div class="col-12 col-lg-8 px-0"><data:i.body/></div>
+                  <aside class="col-12 col-lg-3 p-0 offset-0 offset-lg-1" id="rightbar">
+                    <!--b:section#sidebar(preferred="yes" showaddelement="yes")//search
+                    -->
+                    <!--#about
+                    .d-flex.pt-2
+                        i#openSearch.material-icons.text-white.p-1 search
+                        input#buscador(type='search')
+                    
+                    -->
+                    <p class="h5 my-2 font-italic border-title pb-1 mt-4">Artículos Relacionados</p><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                    <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                    <hr/><img class="img-fluid my-2" src="https://1.bp.blogspot.com/-5ZbYcvfgEUY/X39dCs0tCAI/AAAAAAAAEFs/1LoxLrIt2HQycOknWc6jAHdS-VjDOucpQCLcBGAsYHQ/s16000/ad03.png" alt="..."/>
+                    <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                    <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
+                    <hr/>
+                  </aside>
                 </div>
-                <div class="col-12 col-lg-9">
-                  <div class="container"><data:i.body/></div>
-                </div>
-                <aside class="col-12 col-lg-3 p-0" id="rightbar">
-                  <!--b:section#sidebar(preferred="yes" showaddelement="yes")//search
-                  -->
-                  <!--#about
-                  .d-flex.pt-2
-                      i#openSearch.material-icons.text-white.p-1 search
-                      input#buscador(type='search')
-                  
-                  -->
-                  <p class="h5 my-2 font-italic border-title pb-1 mt-4">Artículos Relacionados</p><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-                  <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-                  <hr/><img class="img-fluid my-2" src="https://1.bp.blogspot.com/-5ZbYcvfgEUY/X39dCs0tCAI/AAAAAAAAEFs/1LoxLrIt2HQycOknWc6jAHdS-VjDOucpQCLcBGAsYHQ/s16000/ad03.png" alt="..."/>
-                  <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-                  <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-                  <hr/>
-                </aside>
-              </div>
-            </b:loop>
+              </b:loop>
+            </div>
           </b:includable>
         </b:widget>
       </b:section>
     </div>
+    <!--bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script type="text/javascript">//HIGHLIGHTS
 let highlights = document.getElementsByClassName('highlight');
 let info = document.getElementsByClassName('info');
@@ -473,7 +494,6 @@ for(let i = 0;  highlights.length > i; i++){
         info[i].style.backgroundColor =   "rgba(0, 0, 0, 75%)"; 
     })
 }
-//document.querySelector(".navbar-toggler").addEventListener("click", function(e){ document.querySelector("#navbarSupportedContent").classList.toggle("show"); });
 
     </script>
     <b:if cond="data:view.isHomepage">
@@ -548,12 +568,54 @@ function addHighlights(){
         i++;
     }
 }
-document.addEventListener('DOMContentLoaded', function(e) {
+//document.addEventListener('DOMContentLoaded', function(e) {
     getArticles(articles);
     deleteBlogPost();
     addHighlights();
     addArticles();
-})
+//})
+
+      </script>
+    </b:if>
+    <b:if cond="data:view.isPost">
+      <script type="text/javascript">//articlesPosts
+let post = document.getElementById("posts"),
+    article = post.getElementsByClassName("publicaciones")[0],
+    postImgs = article.querySelectorAll('a > img'),
+    postTexts = article.querySelectorAll('div'),
+    postTexts2 = article.querySelectorAll('span'),
+    postLinks = article.querySelectorAll('a'),
+    postImgSource = postImgs[1].getAttribute("src");
+
+postImgs[1].style.display = "none";
+article.getElementsByClassName("img-fluid")[0].setAttribute("src", postImgSource);
+//remove padding and margin to a tag
+for (l in postLinks) {
+    if(l >= 2){
+        postLinks[l].removeAttribute("style");   
+    }
+}
+//remove img styles and add new styles 
+for (p in postImgs){
+    if(p >= 2){
+        postImgs[p].setAttribute("class", "img-fluid mx-auto article-img");   
+        postImgs[p].removeAttribute("width");   
+        postImgs[p].removeAttribute("height");   
+        postImgs[p].removeAttribute("style");   
+    }
+}
+//delete style justify all text
+for (t in postTexts) {
+    if(typeof postTexts[t] === "object") {
+        postTexts[t].removeAttribute("style");
+    }
+}
+for (s in postTexts2) {
+    if(typeof postTexts2[s] === "object") {
+        postTexts2[s].removeAttribute("style");
+        postTexts2[s].setAttribute("style", "font-size:18px");
+    }
+}
 
       </script>
     </b:if>

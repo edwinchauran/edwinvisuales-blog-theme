@@ -1,7 +1,6 @@
 #load_screen
     #loading
         | loading
-
 b:if(cond="data:view.isHomepage")
     .container.mt-3.mb-1
         //HIGHTLIGHTS POSTS
@@ -13,9 +12,9 @@ b:if(cond="data:view.isHomepage")
             |Articulos Recientes
         .row#articulos
             //LOOP
-            include recientes.pug
-            include recientes.pug
-            include recientes.pug
+            - for (let i = 0; i < 3; i++) {
+                include recientes.pug
+            - }
 //MAIN SECTION
 .container
     b:section#posts(growth="horizontal" maxwidgets="" showaddelement="yes")

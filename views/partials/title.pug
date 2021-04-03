@@ -1,0 +1,9 @@
+.w-100.header-title.p-3
+    b:if(cond="data:view.isHomepage")
+        h1.text-center
+            strong
+                |<data:blog.title/>
+        b:else/
+        h2.text-center
+            strong
+                |<data:blog.title/>
