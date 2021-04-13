@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<html b:css="false" b:js="false" expr:lang="data:blog.locale" expr:dir="data:blog.languageDirection" b:responsive="true" b:defaultwidgetversion="2" b:layoutsVersion="3" b:templateVersion="1.3.0" mlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><head>
+<!--b:version='2' class="v2" b:layoutsVersion='3'-->
+<html class="v2" b:css="false" b:version="2" b:layoutsVersion="3" b:js="false" expr:lang="data:blog.locale" expr:dir="data:blog.languageDirection" b:responsive="true" b:templateVersion="1.3.0" mlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><head>
   <script>window.addEventListener("load", function(){
 	var load_screen = document.getElementById("load_screen");
 	document.body.removeChild(load_screen);
@@ -367,7 +368,7 @@ main, #nav {
                 <b:class name="active" cond="data:view.url == &quot;https://edwinvisuales.blogspot.com/p/sobre-mi.html&quot;"></b:class>Sobre mi</a></li>
           </ul>
           <!--redes sociales-->
-          <div class="d-none d-lg-block ms-auto text-light h6 my-auto"><a href="#"><i class="bi-facebook mx-2" role="img" aria-label="Facebook"></i></a><a href="#"><i class="bi-instagram mx-2" role="img" aria-label="Instagram"></i></a><a href="#"><i class="bi-github mx-2" role="img" aria-label="GitHub"></i></a><a href="#"><i class="bi-twitter mx-2" role="img" aria-label="Twitter"></i></a></div>
+          <div class="d-none d-lg-block ms-auto text-light h6 my-auto"><a href="https://github.com/edwinvisuales/edwinvisuales-blog-theme/"><i class="bi-github mx-2" role="img" aria-label="GitHub"></i></a><a href="#"><i class="text-muted bi-facebook mx-2" role="img" aria-label="Facebook"></i></a><a href="#"><i class="text-muted bi-instagram mx-2" role="img" aria-label="Instagram"></i></a><a href="#"><i class="text-muted bi-twitter mx-2" role="img" aria-label="Twitter"></i></a></div>
           <div class="d-block d-lg-none text-light h4 mt-4 text-center"><a href="#"><i class="bi-facebook mx-4" role="img" aria-label="Facebook"></i></a><a href="#"><i class="bi-instagram mx-4" role="img" aria-label="Instagram"></i></a><a href="#"><i class="bi-github mx-4" role="img" aria-label="GitHub"></i></a><a href="#"><i class="bi-twitter mx-4" role="img" aria-label="Twitter"></i></a></div>
           <!--form.form-inline.my-2.my-lg-0
           input.outline-dark.bg-negro.form-control.mr-sm-2(type='search' placeholder='Buscar' aria-label='Search')
@@ -441,41 +442,42 @@ main, #nav {
     </b:if>
     <!--MAIN SECTION-->
     <div class="container">
-      <b:section id="posts" growth="horizontal" maxwidgets="" showaddelement="yes">
-        <b:widget id="Blog1" locked="false" title="Entradas" type="Blog" version="1">
-          <b:includable id="main" var="post">
-            <div class="container">
-              <b:loop var="i" values="data:posts">
-                <div class="row publicaciones">
-                  <div class="col-12 p-0 md-auto">
-                    <h4 class="h1 text-center mb-3 mx-1 m-lg-0"><data:i.title/></h4>
-                    <b:if cond="data:view.isPost || data:view.isHomepage"><a class="text-center my-2 figure-caption" expr:href="data:i.url"><data:i.timestamp/> - <data:i.numComments/> - comentarios</a>
-                      <figure><a expr:href="data:i.url"><img class="mb-4 img-fluid article-img" src=""/></a></figure>
-                    </b:if>
+      <b:if cond="data:view.isPost">
+        <div class="row publicaciones">
+          <div class="col-12 p-0 md-auto">
+            <h4 class="h1 text-center mb-3 mx-1 m-lg-0"><a class="text-center my-2 figure-caption"></a>
+              <figure><a href=""><img class="mb-4 img-fluid article-img" src=""/></a></figure>
+            </h4>
+          </div>
+          <div class="col-12 col-lg-8 px-0">
+            <b:section id="postss" preferred="yes" growth="horizontal" maxwidgets="" showaddelement="yes">
+              <b:widget id="Blog12" locked="no" title="Entradas" type="Blog" version="1"/>
+            </b:section>
+          </div>
+        </div>
+        <b:else/>
+        <b:section id="posts" preferred="yes" growth="horizontal" maxwidgets="" showaddelement="yes">
+          <b:widget id="Blog1" locked="no" title="Entradas" type="Blog" version="1">
+            <b:includable id="main" var="post">
+              <div class="container">
+                <b:loop var="i" values="data:posts">
+                  <div class="row publicaciones">
+                    <div class="col-12 p-0 md-auto">
+                      <h4 class="h1 text-center mb-3 mx-1 m-lg-0"><data:i.title/></h4>
+                      <b:if cond="data:view.isPost || data:view.isHomepage"><a class="text-center my-2 figure-caption" expr:href="data:i.url"><data:i.timestamp/> - <data:i.numComments/> - comentarios</a>
+                        <figure><a expr:href="data:i.url"><img class="mb-4 img-fluid article-img" src=""/></a></figure>
+                      </b:if>
+                    </div>
+                    <div class="col-12 col-lg-8 px-0"><data:i.body/></div>
                   </div>
-                  <div class="col-12 col-lg-8 px-0"><data:i.body/></div>
-                  <aside class="col-12 col-lg-3 p-0 offset-0 offset-lg-1" id="rightbar">
-                    <!--b:section#sidebar(preferred="yes" showaddelement="yes")//search
-                    -->
-                    <!--#about
-                    .d-flex.pt-2
-                        i#openSearch.material-icons.text-white.p-1 search
-                        input#buscador(type='search')
-                    
-                    -->
-                    <p class="h5 my-2 font-italic border-title pb-1 mt-4">Artículos Relacionados</p><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-                    <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-                    <hr/><img class="img-fluid my-2" src="https://1.bp.blogspot.com/-5ZbYcvfgEUY/X39dCs0tCAI/AAAAAAAAEFs/1LoxLrIt2HQycOknWc6jAHdS-VjDOucpQCLcBGAsYHQ/s16000/ad03.png" alt="..."/>
-                    <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-                    <hr/><img class="img-fluid mb-1" src="https://www.coupdemainmagazine.com/sites/default/files/styles/hero_image/public/article/14649/hero-14649-1827449868.jpg?itok=xFLvjHrT" alt="..."/><a class="text-purple-2" href="/articulo.html">Lorem ipsum dolor sit amet consectetur</a>
-                    <hr/>
-                  </aside>
-                </div>
-              </b:loop>
-            </div>
-          </b:includable>
-        </b:widget>
-      </b:section>
+                </b:loop>
+              </div>
+            </b:includable>
+          </b:widget>
+          <!--aside#rightbar.col-12.col-lg-3.p-0.offset-0.offset-lg-1include rightbar.pug
+          -->
+        </b:section>
+      </b:if>
     </div>
     <!--bootstrap js-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
@@ -578,17 +580,20 @@ function addHighlights(){
       </script>
     </b:if>
     <b:if cond="data:view.isPost">
-      <script type="text/javascript">//articlesPosts
-let post = document.getElementById("posts"),
-    article = post.getElementsByClassName("publicaciones")[0],
-    postImgs = article.querySelectorAll('a > img'),
-    postTexts = article.querySelectorAll('div'),
-    postTexts2 = article.querySelectorAll('span'),
-    postLinks = article.querySelectorAll('a'),
-    postImgSource = postImgs[1].getAttribute("src");
+      <script type="text/javascript">//postsPosts
+let post = document.getElementById("postss"),
+    //post = post.getElementsByClassName("publicaciones")[0],
+    postImgs = post.querySelectorAll('a > img'),
+    postTexts = post.querySelectorAll('div'),
+    postTexts2 = post.querySelectorAll('span'),
+    postLinks = post.querySelectorAll('a'),
+    postImgSource = postImgs[0].getAttribute("src");
+//document.getElementsByClassName("Attribution")[0].style.display = "none";
+//document.getElementsByClassName("Header")[0].style.display = "none";
+postImgs[0].style.display = "none";
+//post.getElementsByClassName("img-fluid")[0].setAttribute("src", postImgSource);
+document.querySelector("body > div.container > div > div.col-12.p-0.md-auto > h4 > figure > a > img").setAttribute("src", postImgSource);
 
-postImgs[1].style.display = "none";
-article.getElementsByClassName("img-fluid")[0].setAttribute("src", postImgSource);
 //remove padding and margin to a tag
 for (l in postLinks) {
     if(l >= 2){
@@ -598,7 +603,7 @@ for (l in postLinks) {
 //remove img styles and add new styles 
 for (p in postImgs){
     if(p >= 2){
-        postImgs[p].setAttribute("class", "img-fluid mx-auto article-img");   
+        postImgs[p].setAttribute("class", "img-fluid mx-auto post-img");   
         postImgs[p].removeAttribute("width");   
         postImgs[p].removeAttribute("height");   
         postImgs[p].removeAttribute("style");   
@@ -621,9 +626,11 @@ for (s in postTexts2) {
     </b:if>
   </body>
   <footer>
-    <div class="container text-white p-1 text-center">
-      <!--b:section#footer(preferred="yes" showaddelement="yes")-->
+    <div class="container text-white p-1 text-center mt-4">
+      <b:section id="footer" showaddelement="yes"></b:section>
       <p class="my-auto">Blogger Theme designed by Edwin Visuales | 2020 </p>
+      <p class="-my-auto">Este blog está en desarrollo</p>
+      <p class="my-auto"><a href="https://github.com/edwinvisuales/edwinvisuales-blog-theme/"><i class="bi-github mx-2" role="img" aria-label="Github"> </i></a></p>
       <div class="col-2 d-none-d-xl-block" style="background-color:black;"></div>
       <!--script include js/scripts.js
       -->

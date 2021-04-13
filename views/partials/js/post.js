@@ -1,14 +1,17 @@
-//articlesPosts
-let post = document.getElementById("posts"),
-    article = post.getElementsByClassName("publicaciones")[0],
-    postImgs = article.querySelectorAll('a > img'),
-    postTexts = article.querySelectorAll('div'),
-    postTexts2 = article.querySelectorAll('span'),
-    postLinks = article.querySelectorAll('a'),
-    postImgSource = postImgs[1].getAttribute("src");
+//postsPosts
+let post = document.getElementById("postss"),
+    //post = post.getElementsByClassName("publicaciones")[0],
+    postImgs = post.querySelectorAll('a > img'),
+    postTexts = post.querySelectorAll('div'),
+    postTexts2 = post.querySelectorAll('span'),
+    postLinks = post.querySelectorAll('a'),
+    postImgSource = postImgs[0].getAttribute("src");
+//document.getElementsByClassName("Attribution")[0].style.display = "none";
+//document.getElementsByClassName("Header")[0].style.display = "none";
+postImgs[0].style.display = "none";
+//post.getElementsByClassName("img-fluid")[0].setAttribute("src", postImgSource);
+document.querySelector("body > div.container > div > div.col-12.p-0.md-auto > h4 > figure > a > img").setAttribute("src", postImgSource);
 
-postImgs[1].style.display = "none";
-article.getElementsByClassName("img-fluid")[0].setAttribute("src", postImgSource);
 //remove padding and margin to a tag
 for (l in postLinks) {
     if(l >= 2){
@@ -18,7 +21,7 @@ for (l in postLinks) {
 //remove img styles and add new styles 
 for (p in postImgs){
     if(p >= 2){
-        postImgs[p].setAttribute("class", "img-fluid mx-auto article-img");   
+        postImgs[p].setAttribute("class", "img-fluid mx-auto post-img");   
         postImgs[p].removeAttribute("width");   
         postImgs[p].removeAttribute("height");   
         postImgs[p].removeAttribute("style");   

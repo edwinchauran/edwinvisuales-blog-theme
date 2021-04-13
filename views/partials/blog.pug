@@ -1,4 +1,4 @@
-b:widget#Blog1(locked="false" title="Entradas" type="Blog" version="1")
+b:widget#Blog1(locked="no" title="Entradas" type="Blog" version="1")
     b:includable(id="main" var="post")
         .container
             b:loop(var="i"  values="data:posts")
@@ -14,5 +14,6 @@ b:widget#Blog1(locked="false" title="Entradas" type="Blog" version="1")
                                     img.mb-4.img-fluid.article-img(src="")
                     .col-12.col-lg-8.px-0
                         | <data:i.body/>
-                    aside#rightbar.col-12.col-lg-3.p-0.offset-0.offset-lg-1
-                        include rightbar.pug
+//aside#rightbar.col-12.col-lg-3.p-0.offset-0.offset-lg-1
+    include rightbar.pug
+
