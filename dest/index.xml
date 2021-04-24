@@ -364,7 +364,10 @@ main, #nav {
           <ul class="navbar-nav mr-auto">
             <li class="nav-item"><a class="nav-link" expr:href="data:blog.homepageUrl">
                 <b:class name="active" cond="data:view.isHomepage"></b:class>Inicio </a></li>
-            <li class="nav-item"><a class="nav-link disabled">Programación</a></li>
+            <!--li.nav-item
+            a.nav-link.disabled
+                | Programación
+            -->
             <li class="nav-item"><a class="nav-link" href="https://edwinvisuales.blogspot.com/p/sobre-mi.html">
                 <b:class name="active" cond="data:view.url == &quot;https://edwinvisuales.blogspot.com/p/sobre-mi.html&quot;"></b:class>Sobre mi</a></li>
           </ul>

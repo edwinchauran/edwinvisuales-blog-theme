@@ -16,8 +16,9 @@ b:if(cond="data:view.isHomepage")
                 include recientes.pug
             - }
 //MAIN SECTION
-b:if(cond="data:view.isPost")
-    .container
+
+.container
+    b:if(cond="data:view.isPost")
         include isPost.pug
         b:else/
         b:section#posts(preferred="yes" growth="horizontal" maxwidgets="" showaddelement="yes")
