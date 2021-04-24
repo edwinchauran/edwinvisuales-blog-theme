@@ -5,8 +5,6 @@
 	var load_screen = document.getElementById("load_screen");
 	document.body.removeChild(load_screen);
 });
-
-
   </script><b:include data='blog' name='all-head-content'/>
   <meta charset="UTF-8"/>
   <!--data:description-->
@@ -202,6 +200,7 @@ nav  {
 } 
 
 footer {
+    text-decoration: none;
     background:black;
     z-index:-10;
 }
@@ -366,7 +365,6 @@ main, #nav {
             <li class="nav-item"><a class="nav-link" expr:href="data:blog.homepageUrl">
                 <b:class name="active" cond="data:view.isHomepage"></b:class>Inicio </a></li>
             <li class="nav-item"><a class="nav-link disabled">Programación</a></li>
-            <li class="nav-item"><a class="nav-link disabled">Audiovisuales</a></li>
             <li class="nav-item"><a class="nav-link" href="https://edwinvisuales.blogspot.com/p/sobre-mi.html">
                 <b:class name="active" cond="data:view.url == &quot;https://edwinvisuales.blogspot.com/p/sobre-mi.html&quot;"></b:class>Sobre mi</a></li>
           </ul>
@@ -448,9 +446,8 @@ main, #nav {
       <b:if cond="data:view.isPost">
         <div class="row publicaciones">
           <div class="col-12 p-0 md-auto">
-            <h4 class="h1 text-center mb-3 mx-1 m-lg-0"><a class="text-center my-2 figure-caption"></a>
-              <figure><a href=""><img class="mb-4 img-fluid article-img" src=""/></a></figure>
-            </h4>
+            <h4 class="titulo h1 text-center mb-3 mx-1 m-lg-0 pb-2"></h4><a class="text-center my-2 figure-caption">
+              <figure><a href=""><img class="mb-4 img-fluid article-img" src=""/></a></figure></a>
           </div>
           <div class="col-12 col-lg-8 px-0">
             <b:section class="container" id="postss" preferred="yes" growth="horizontal" maxwidgets="" showaddelement="yes">
@@ -466,8 +463,8 @@ main, #nav {
                 input#buscador(type='search')
             
             -->
-            <p class="h5 my-2 font-italic border-title pb-1 mt-4">Artículos Relacionados</p><img class="img-fluid mb-1" src="https://1.bp.blogspot.com/-Inh7IVohuuc/V_9xBElvbGI/AAAAAAAAA2k/PVeOPkhVDrQrpH5bi-qzZUvqBhyIkNOrgCLcB/s640/conocimiento-internet.jpg" alt="..."/><a class="text-purple-2" href="https://edwinvisuales.blogspot.com/2018/10/todos-tenemos-acceso-internet-esa-gran.html">Lo bueno de ser autodidacta </a>
-            <hr/><img class="img-fluid mb-1" src="https://1.bp.blogspot.com/-9vmNer8qa_4/XLXzrfvMIqI/AAAAAAAADjE/wXLy79o0g8kMp2PFTR11HedC4ZBH1F_1ACK4BGAYYCw/s640/1_d27A5K4i63BktGDEg25hqA.jpeg" alt="..."/><a class="text-purple-2" href="https://edwinvisuales.blogspot.com/2018/10/python-la-vez-que-intentaron-ensenarlo.html">Python, la vez que intentaron enseñarlo a estudiantes de Audiovisuales  </a>
+            <p class="h5 my-2 font-italic border-title pb-1 mt-4">Artículos Relacionados</p><a href="https://edwinvisuales.blogspot.com/2018/10/todos-tenemos-acceso-internet-esa-gran.html"> <img class="img-fluid mb-1" src="https://1.bp.blogspot.com/-Inh7IVohuuc/V_9xBElvbGI/AAAAAAAAA2k/PVeOPkhVDrQrpH5bi-qzZUvqBhyIkNOrgCLcB/s640/conocimiento-internet.jpg" alt="..."/></a><a class="text-purple-2" href="https://edwinvisuales.blogspot.com/2018/10/todos-tenemos-acceso-internet-esa-gran.html">Lo bueno de ser autodidacta </a>
+            <hr/><a href="https://edwinvisuales.blogspot.com/2018/10/python-la-vez-que-intentaron-ensenarlo.html"><img class="img-fluid mb-1" src="https://1.bp.blogspot.com/-9vmNer8qa_4/XLXzrfvMIqI/AAAAAAAADjE/wXLy79o0g8kMp2PFTR11HedC4ZBH1F_1ACK4BGAYYCw/s640/1_d27A5K4i63BktGDEg25hqA.jpeg" alt="..."/></a><a class="text-purple-2" href="https://edwinvisuales.blogspot.com/2018/10/python-la-vez-que-intentaron-ensenarlo.html">Python, la vez que intentaron enseñarlo a estudiantes de Audiovisuales  </a>
           </aside>
         </div>
         <b:else/>
@@ -605,7 +602,8 @@ let post = document.getElementById("postss"),
 //document.getElementsByClassName("Header")[0].style.display = "none";
 postImgs[0].style.display = "none";
 //post.getElementsByClassName("img-fluid")[0].setAttribute("src", postImgSource);
-document.querySelector("body > div.container > div > div.col-12.p-0.md-auto > h4 > figure > a > img").setAttribute("src", postImgSource);
+document.querySelector("body > div.container > div > div.col-12.p-0.md-auto > figure > a > img")
+.setAttribute("src", postImgSource);
 
 //remove padding and margin to a tag
 for (l in postLinks) {
@@ -635,18 +633,39 @@ for (s in postTexts2) {
     }
 }
 
+function insertPostTitle() {
+    let oldTitle = document.querySelector("h3")
+    let newTitle = document.querySelector("h4");
+    newTitle.innerHTML = oldTitle.innerText; 
+    oldTitle.style.display = "none";
+}
+insertPostTitle();
       </script>
     </b:if>
   </body>
   <footer>
-    <div class="container text-white p-1 text-center mt-4">
-      <b:section id="footer" showaddelement="yes"></b:section>
-      <p class="my-auto">Blogger Theme designed by Edwin Visuales | 2020 </p>
-      <p class="-my-auto">Este blog está en desarrollo</p>
-      <p class="my-auto"><a href="https://github.com/edwinvisuales/edwinvisuales-blog-theme/"><i class="bi-github mx-2" role="img" aria-label="Github"> </i></a></p>
-      <div class="col-2 d-none-d-xl-block" style="background-color:black;"></div>
-      <!--script include js/scripts.js
-      -->
+    <div class="container text-white p-1 text-center mt-4"> 
+      <b:section id="footer" showaddelement="yes"> </b:section>
+      <div class="row">
+        <!--.col-12.col-lg-6
+        ul 
+            li 
+                a(expr:href="data:blog.homepageUrl").text-purple-2 
+                    | Inicio 
+            li 
+                a(href="").text-muted
+                    | Programación 
+            li 
+                a(href="https://edwinvisuales.blogspot.com/p/sobre-mi.html").text-purple-2 
+                    | Sobre Mi  
+            li 
+                a(href="https://edwinvisuales.blogspot.com/p/faq.html").text-purple-2 
+                    | FAQ
+        -->
+        <div class="col-12">
+          <p>Blogger Theme designed by Edwin Visuales | 2020 <a href="https://github.com/edwinvisuales/edwinvisuales-blog-theme/"><i class="bi-github mx-2" role="img" aria-label="Github"> </i></a></p>
+        </div>
+      </div>
     </div>
   </footer>
 </html>

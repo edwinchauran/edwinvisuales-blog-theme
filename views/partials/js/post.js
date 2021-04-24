@@ -10,7 +10,8 @@ let post = document.getElementById("postss"),
 //document.getElementsByClassName("Header")[0].style.display = "none";
 postImgs[0].style.display = "none";
 //post.getElementsByClassName("img-fluid")[0].setAttribute("src", postImgSource);
-document.querySelector("body > div.container > div > div.col-12.p-0.md-auto > h4 > figure > a > img").setAttribute("src", postImgSource);
+document.querySelector("body > div.container > div > div.col-12.p-0.md-auto > figure > a > img")
+.setAttribute("src", postImgSource);
 
 //remove padding and margin to a tag
 for (l in postLinks) {
@@ -39,3 +40,11 @@ for (s in postTexts2) {
         postTexts2[s].setAttribute("style", "font-size:18px");
     }
 }
+
+function insertPostTitle() {
+    let oldTitle = document.querySelector("h3")
+    let newTitle = document.querySelector("h4");
+    newTitle.innerHTML = oldTitle.innerText; 
+    oldTitle.style.display = "none";
+}
+insertPostTitle();

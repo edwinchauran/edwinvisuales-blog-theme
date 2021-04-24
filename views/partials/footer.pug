@@ -1,15 +1,22 @@
-.container.text-white.p-1.text-center.mt-4
-    b:section#footer( showaddelement="yes")
-        
-    p.my-auto
-        |Blogger Theme designed by Edwin Visuales | 2020 
-
-    p.-my-auto
-        | Este blog está en desarrollo
-    p.my-auto
-        a(href="https://github.com/edwinvisuales/edwinvisuales-blog-theme/")
-            i.bi-github.mx-2(role="img" aria-label="Github") 
-    .col-2.d-none-d-xl-block(style='background-color:black;')
-
-    //script 
-        include js/scripts.js
+.container.text-white.p-1.text-center.mt-4 
+    b:section#footer( showaddelement="yes") 
+    .row
+        //.col-12.col-lg-6
+            ul 
+                li 
+                    a(expr:href="data:blog.homepageUrl").text-purple-2 
+                        | Inicio 
+                li 
+                    a(href="").text-muted
+                        | Programación 
+                li 
+                    a(href="https://edwinvisuales.blogspot.com/p/sobre-mi.html").text-purple-2 
+                        | Sobre Mi  
+                li 
+                    a(href="https://edwinvisuales.blogspot.com/p/faq.html").text-purple-2 
+                        | FAQ
+        .col-12
+            p
+                |Blogger Theme designed by Edwin Visuales | 2020 
+                a(href="https://github.com/edwinvisuales/edwinvisuales-blog-theme/")
+                    i.bi-github.mx-2(role="img" aria-label="Github") 

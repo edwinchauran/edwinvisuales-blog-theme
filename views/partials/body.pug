@@ -16,20 +16,9 @@ b:if(cond="data:view.isHomepage")
                 include recientes.pug
             - }
 //MAIN SECTION
-.container
-    b:if(cond="data:view.isPost")
-        .row.publicaciones
-            .col-12.p-0.md-auto
-                h4.h1.text-center.mb-3.mx-1.m-lg-0
-                    a.text-center.my-2.figure-caption()
-                    figure
-                        a(href="")
-                            img.mb-4.img-fluid.article-img(src="")
-            .col-12.col-lg-8.px-0
-                b:section#postss(class="container" preferred="yes" growth="horizontal" maxwidgets="" showaddelement="yes")
-                    b:widget#Blog12(locked="no" title="Entradas" type="Blog" version="1")/
-            aside#rightbar.col-12.col-lg-3.p-0.offset-0.offset-lg-1
-                include rightbar.pug
+b:if(cond="data:view.isPost")
+    .container
+        include isPost.pug
         b:else/
         b:section#posts(preferred="yes" growth="horizontal" maxwidgets="" showaddelement="yes")
             include blog.pug

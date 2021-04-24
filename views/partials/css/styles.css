@@ -180,6 +180,7 @@ nav  {
 } 
 
 footer {
+    text-decoration: none;
     background:black;
     z-index:-10;
 }
