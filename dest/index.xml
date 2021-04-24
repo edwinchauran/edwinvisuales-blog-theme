@@ -295,6 +295,9 @@ main, #nav {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+    .responsive-img-recientes {
+    height: 200px; 
+}
 .article-img {
     height:600px;
 }
@@ -450,10 +453,22 @@ main, #nav {
             </h4>
           </div>
           <div class="col-12 col-lg-8 px-0">
-            <b:section id="postss" preferred="yes" growth="horizontal" maxwidgets="" showaddelement="yes">
+            <b:section class="container" id="postss" preferred="yes" growth="horizontal" maxwidgets="" showaddelement="yes">
               <b:widget id="Blog12" locked="no" title="Entradas" type="Blog" version="1"/>
             </b:section>
           </div>
+          <aside class="col-12 col-lg-3 p-0 offset-0 offset-lg-1" id="rightbar">
+            <b:section id="sidebar" preferred="yes" showaddelement="yes"></b:section>
+            <!--search-->
+            <!--#about
+            .d-flex.pt-2
+                i#openSearch.material-icons.text-white.p-1 search
+                input#buscador(type='search')
+            
+            -->
+            <p class="h5 my-2 font-italic border-title pb-1 mt-4">Artículos Relacionados</p><img class="img-fluid mb-1" src="https://1.bp.blogspot.com/-Inh7IVohuuc/V_9xBElvbGI/AAAAAAAAA2k/PVeOPkhVDrQrpH5bi-qzZUvqBhyIkNOrgCLcB/s640/conocimiento-internet.jpg" alt="..."/><a class="text-purple-2" href="https://edwinvisuales.blogspot.com/2018/10/todos-tenemos-acceso-internet-esa-gran.html">Lo bueno de ser autodidacta </a>
+            <hr/><img class="img-fluid mb-1" src="https://1.bp.blogspot.com/-9vmNer8qa_4/XLXzrfvMIqI/AAAAAAAADjE/wXLy79o0g8kMp2PFTR11HedC4ZBH1F_1ACK4BGAYYCw/s640/1_d27A5K4i63BktGDEg25hqA.jpeg" alt="..."/><a class="text-purple-2" href="https://edwinvisuales.blogspot.com/2018/10/python-la-vez-que-intentaron-ensenarlo.html">Python, la vez que intentaron enseñarlo a estudiantes de Audiovisuales  </a>
+          </aside>
         </div>
         <b:else/>
         <b:section id="posts" preferred="yes" growth="horizontal" maxwidgets="" showaddelement="yes">
@@ -474,8 +489,6 @@ main, #nav {
               </div>
             </b:includable>
           </b:widget>
-          <!--aside#rightbar.col-12.col-lg-3.p-0.offset-0.offset-lg-1include rightbar.pug
-          -->
         </b:section>
       </b:if>
     </div>
